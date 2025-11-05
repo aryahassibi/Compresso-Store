@@ -3,15 +3,13 @@ USE ecommerce_db;
 -- Note: Passwords are all "password"
 INSERT INTO Users (user_id, first_name, last_name, email, phone_number, tax_id, password_hash)
 VALUES
-(1, "Arya", "Hassibi", "arya.hassibi@sabanciuniv.com", "+905301234567", "12345678901", SHA2("password", 256)),
-(2, "Beste", "Bayhan", "bestebayhan@sabanciuniv.edu", "+905302345678", "23456789012", SHA2("password", 256)),
-(3, "Mustafa", "Topcu", "mustafatopcu@sabanciuniv.com", "+905303456789", "34567890123", SHA2("password", 256)),
-(4, "Orhun Ege", "Ozpay", "orhun@sabanciuniv.com", "+905304567890", "45678901234", SHA2("password", 256)),
-(5, "Eid", "Alhamali", "eid@sabanciuniv.com", "+905305678901", "56789012345", SHA2("password", 256)),
-(6, "Ecem", "Akın", "ecem@sabanciuniv.com", "+905306789012", "67890123456", SHA2("password", 256)),
-(7, "Zeynep", "Işık", "zeynep.isik@sabanciuniv.com", "+905307890123", "78901234567", SHA2("password", 256)),
-(8, "Cemal", "Yılmaz", "cemal.yilmaz@sabanciuniv.com", "+905308901234", "89012345678", SHA2("password", 256)),
-(9, "Test", "User", "test@sabanciuniv.com", "+905309012345", "90123456789", SHA2("password", 256));
+(1, "Arya", "Hassibi", "arya@user.com", "+905301234567", "12345678901", SHA2("password", 256)),
+(2, "Beste", "Bayhan", "bestebayhan@user.com", "+905302345678", "23456789012", SHA2("password", 256)),
+(3, "Mustafa", "Topcu", "mustafatopcu@user.com", "+905303456789", "34567890123", SHA2("password", 256)),
+(4, "Orhun Ege", "Ozpay", "orhun@user.com", "+905304567890", "45678901234", SHA2("password", 256)),
+(5, "Eid", "Alhamali", "eid@user.com", "+905305678901", "56789012345", SHA2("password", 256)),
+(6, "Ecem", "Akın", "ecem@user.com", "+905306789012", "67890123456", SHA2("password", 256)),
+(9, "Test", "User", "test@user.com", "+905309012345", "90123456789", SHA2("password", 256));
 
 -- Note: Passwords are all "password"
 INSERT INTO Managers (manager_id, first_name, last_name, email, password_hash, role)
@@ -22,8 +20,6 @@ VALUES
 (4, "Orhun", "Ege Ozpay", "orhun@manager.com", SHA2("admin12345", 256), "product_manager"),
 (5, "Eid", "Alhamali", "eid@manager.com", SHA2("admin12345", 256), "sales_manager"),
 (6, "Ecem", "Akın", "ecem@manager.com", SHA2("admin12345", 256), "product_manager"),
-(7, "Zeynep", "Işık", "zeynep@manager.com", SHA2("admin12345", 256), "product_manager"),
-(8, "Cemal", "Yılmaz", "cemal@manager.com", SHA2("admin12345", 256), "product_manager"),
 (9, "Sales", "Manager", "sales@manager.com", SHA2("admin12345", 256), "sales_manager"),
 (10, "Product", "Manager", "product@manager.com", SHA2("admin12345", 256), "product_manager")
 ON DUPLICATE KEY UPDATE 
@@ -47,102 +43,102 @@ VALUES
 (2, "Express Shipping", 59.99, "Delivery in 2-3 business days."),
 (3, "Overnight Shipping", 119.99, "Next business day delivery.");
 
-INSERT INTO Products (product_id, name, origin, roast_level, bean_type, grind_type, flavor_profile, processing_method, caffeine_content, category_id, description, warranty_status, distributor_info, average_rating)
+INSERT INTO Products (product_id, name, origin, roast_level, bean_type, grind_type, flavor_profile, processing_method, caffeine_content, category_id, description, warranty_status, distributor_info)
 VALUES
-(1, "Sunrise Over the Serengeti", "Tanzania", "Light", "Arabica", "Whole Bean", "Citrus and floral whispers", "Washed", "High", 1, 
+(1, "Product C | Sunrise Over the Serengeti", "Tanzania", "Light", "Arabica", "Whole Bean", "Citrus and floral whispers", "Washed", "High", 1, 
     "Like the first light kissing the vast plains of the Serengeti, this coffee feels alive. Notes of citrus and delicate florals bloom with every sip, reminding you of new beginnings and untamed beauty.", 
-    FALSE, "Tanzanian Treasures Ltd.", 4.7),
+    FALSE, "Tanzanian Treasures Ltd."),
 
-(2, "Bolivian Echoes", "Bolivia", "Medium", "Blend", "Ground", "Nutty with a whisper of cocoa", "Honey-processed", "Half-Caf", 2, 
+(2, "Product B | Bolivian Echoes", "Bolivia", "Medium", "Blend", "Ground", "Nutty with a whisper of cocoa", "Honey-processed", "Half-Caf", 2, 
     "A quiet symphony that lingers in the soul like the echoes of Andean pan flutes. Its nutty richness and subtle cocoa notes evoke mountain trails and misty mornings.", 
-    TRUE, "Bolivia Bean Collective", 4.5),
+    TRUE, "Bolivia Bean Collective"),
 
-(3, "The Midnight Drifter", "Ethiopia", "Espresso", "Arabica", "Ground", "Dark chocolate and blackberry", "Natural", "High", 3, 
+(3, "Product A | The Midnight Drifter", "Ethiopia", "Espresso", "Arabica", "Ground", "Dark chocolate and blackberry", "Natural", "High", 3, 
     "A bold companion for sleepless nights and untold stories. Its intense dark chocolate depth and blackberry intrigue feel like wandering under a canopy of stars.", 
-    FALSE, "Ethiopian Coffee Routes", 4.8),
+    FALSE, "Ethiopian Coffee Routes"),
 
 (4, "Costa Rican Summer", "Costa Rica", "Light", "Arabica", "Ground", "Citrus and honeydew", "Washed", "High", 3, 
     "The brightness of citrus and a soft hint of honeydew carry you to endless beaches and golden sunsets. A sip is a reminder of warmth and carefree days.", 
-    TRUE, "Costa Rica Coffee & Co.", 4.6),
+    TRUE, "Costa Rica Coffee & Co."),
 
 (5, "Guatemalan Volcano Heart", "Guatemala", "Dark", "Blend", "Whole Bean", "Caramel and red wine", "Natural", "High", 5, 
     "Forged in the heart of volcanic soil, this coffee ignites the senses with rich caramel sweetness and a red wine finish. A tribute to the land's fiery soul.", 
-    FALSE, "Guatemala Coffee Legends", 4.7),
+    FALSE, "Guatemala Coffee Legends"),
 
 (6, "Cuban Memory Lane", "Cuba", "Espresso", "Robusta", "Whole Bean", "Cocoa and brown sugar", "Washed", "High", 4, 
     "A rich, nostalgic blend that whispers of Havana's cobbled streets and sunlit afternoons. Hints of cocoa and brown sugar evoke the rhythm of a simpler time.", 
-    TRUE, "Havana Coffee Roasters", 4.5),
+    TRUE, "Havana Coffee Roasters"),
 
 (7, "Indonesian Silk", "Indonesia", "Medium", "Arabica", "Whole Bean", "Velvety with soft spice", "Honey-processed", "Half-Caf", 4, 
     "Soft and smooth, like the flowing silk of ancient Java. Subtle spices weave through each sip, leaving an impression as graceful as it is unforgettable.", 
-    FALSE, "Indo Luxe Beans", 4.6),
+    FALSE, "Indo Luxe Beans"),
 
 (8, "Misty Hills of Rwanda", "Rwanda", "Light", "Blend", "Ground", "Blackberry and jasmine", "Washed", "Decaf", 3, 
     "Ethereal and serene, this blend transports you to rolling mist-covered hills. Its delicate blackberry and jasmine notes whisper peace and stillness.", 
-    TRUE, "Rwanda Bean Collective", 4.8),
+    TRUE, "Rwanda Bean Collective"),
 
 (9, "Santiago at Dusk", "Chile", "Dark", "Liberica", "Whole Bean", "Earthy with a molasses finish", "Natural", "High", 1, 
     "Deep and grounding, like the fading light on Santiago's streets. Its earthy warmth and molasses undertone linger, wrapping you in twilight's embrace.", 
-    FALSE, "Chilean Coffee Routes", 4.3),
+    FALSE, "Chilean Coffee Routes"),
 
 (10, "Panama Geisha Dream", "Panama", "Light", "Arabica", "Whole Bean", "Jasmine and tropical fruit", "Washed", "High", 3, 
     "An ethereal experience. Jasmine notes entwined with tropical fruit sweetness make this a coffee to savor slowly, like a daydream slipping into reality.", 
-    TRUE, "Panama Coffee Treasures", 4.9),
+    TRUE, "Panama Coffee Treasures"),
 
 (11, "Mexican Firewood", "Mexico", "French", "Blend", "Ground", "Smoke and spiced chocolate", "Other", "Half-Caf", 1, 
     "A robust brew that feels like sitting by a crackling fire in the Mexican highlands. Smoke and spiced chocolate warmth make this a grounding companion.", 
-    FALSE, "Mexican Coffee Collective", 4.4),
+    FALSE, "Mexican Coffee Collective"),
 
 (12, "Peruvian Secret Garden", "Peru", "Medium", "Arabica", "Whole Bean", "Floral and honey", "Washed", "Decaf", 2, 
     "Soft as the petals of an unseen bloom, this coffee whispers of a hidden garden. Its floral and honey notes unfold gently, like secrets in the air.", 
-    TRUE, "Peruvian Heritage Beans", 4.7),
+    TRUE, "Peruvian Heritage Beans"),
 
 (13, "Yemen Desert Mirage", "Yemen", "Dark", "Blend", "Whole Bean", "Chocolate and fig", "Natural", "High", 5, 
     "Like a rare vision in the shifting sands, this coffee is a treasure of chocolate richness and fig sweetness. A mirage worth chasing.", 
-    FALSE, "Yemeni Coffee Routes", 4.8),
+    FALSE, "Yemeni Coffee Routes"),
 
 (14, "Vietnamese Bold Horizon", "Vietnam", "French", "Robusta", "Ground", "Bold with caramel undertones", "Washed", "High", 1, 
     "A daring blend that pushes boundaries. Its boldness and caramel undertones embody the resilience and spirit of Vietnam.", 
-    FALSE, "Vietnam Coffee Collective", 4.3),
+    FALSE, "Vietnam Coffee Collective"),
 
 (15, "Kenyan Red Sunset", "Kenya", "Dark", "Arabica", "Ground", "Berry and wine", "Natural", "High", 5, 
     "Rich as a Kenyan sunset fading to red, this coffee's berry and wine notes evoke a boldness that commands attention.", 
-    FALSE, "Kenyan Bean Collective", 4.7),
+    FALSE, "Kenyan Bean Collective"),
 
 (16, "Honduran Stargazer", "Honduras", "Medium", "Arabica", "Whole Bean", 
     "Sweet and herbal", "Washed", "Decaf", 4, 
     "A coffee for quiet nights under infinite skies. Sweetness and herbal notes blend in harmony, like constellations above.", 
-    TRUE, "Honduran Coffee Routes", 4.4),
+    TRUE, "Honduran Coffee Routes"),
 
 (17, "Laos Whispering Rain", "Laos", "Medium", "Blend", "Whole Bean", "Nutty with soft spice", "Natural", "Half-Caf", 4, 
     "Gentle as rain on lush green fields, this coffee offers nutty warmth with a touch of spice. It feels like a quiet conversation with nature.", 
-    TRUE, "Laos Coffee Collective", 4.5),
+    TRUE, "Laos Coffee Collective"),
 
 (18, "Turkish Caravan Tale", "Turkey", "French", "Blend", "Ground", "Cardamom and dark chocolate", "Other", "High", 2, 
     "Rich, spiced, and complex as the tales of caravans crossing ancient lands. Cardamom and dark chocolate transport you to a world of wonder.", 
-    FALSE, "Turkish Coffee Routes", 4.8),
+    FALSE, "Turkish Coffee Routes"),
 
 (19, "Colombian Daybreak", "Colombia", "Light", "Arabica", "Ground", "Bright and citrusy", "Washed", "High", 2, 
     "Fresh as dawn breaking over Colombian hills, this coffee's brightness awakens the senses and inspires hope for the day ahead.", 
-    TRUE, "Colombian Coffee Legends", 4.6),
+    TRUE, "Colombian Coffee Legends"),
 
 (20, "Ecuadorian High Spirits", "Ecuador", "Medium", "Blend", "Whole Bean", "Cocoa and citrus", "Natural", "High", 4, 
     "Uplifting and bright, this coffee's cocoa depth and citrus zing feel like a celebration in a cup. A tribute to life's vibrant highs.", 
-    TRUE, "Ecuadorian Coffee Routes", 4.7);
+    TRUE, "Ecuadorian Coffee Routes");
 
 INSERT INTO Product_Variant (variant_id, product_id, weight_grams, price, stock, sku)
 VALUES
 -- Product 1 Variants
 (1, 1, 250, 500.00, 100, "ETH-YIR-250"),
 (2, 1, 500, 950.00, 1, "ETH-YIR-500"),          -- Only 1 left in stock
-(3, 1, 1000, 1800.00, 4, "ETH-YIR-1000"),       -- Only 1 left in stock
+(3, 1, 1000, 1800.00, 4, "ETH-YIR-1000"),       
 
 -- Product 2 Variants
-(4, 2, 250, 450.00, 200, "COL-SUP-250"),
-(5, 2, 500, 850.00, 80, "COL-SUP-500"),
+(4, 2, 250, 450.00, 1, "COL-SUP-250"),          -- Only 1 left in stock
+(5, 2, 500, 850.00, 1, "COL-SUP-500"),          -- Only 1 left in stock
 
 -- Product 3 Variants
-(6, 3, 250, 600.00, 150, "BRA-SAN-250"),
+(6, 3, 250, 600.00, 0, "BRA-SAN-250"),          -- Out of stock
 
 -- Product 4 Variants
 (7, 4, 250, 550.00, 0, "KEN-AA-250"),           -- Out of stock
@@ -268,16 +264,22 @@ VALUES
 (36, 36, "/assets/images/products/product20.png", "Ecuadorian High Spirits 500g");
 
 
--- INSERT INTO Address (address_id, user_id, address_line, city, state, postal_code, country)
--- VALUES
--- (1, 1, "İstiklal Cad. No:1", "İstanbul", "İstanbul", "34433", "Turkey"),
--- (2, 2, "Atatürk Bulvarı No:45", "Ankara", "Ankara", "06690", "Turkey"),
--- (3, 3, "Çankaya Sok. No:12", "İzmir", "İzmir", "35210", "Turkey"),
--- (4, 4, "Fatih Mah. No:7", "Bursa", "Bursa", "16010", "Turkey"),
--- (5, 5, "Merkez Cad. No:5", "Antalya", "Antalya", "07020", "Turkey"),
--- (6, 6, "Bağdat Cad. No:8", "İstanbul", "İstanbul", "34726", "Turkey"),
--- (7, 7, "Kızılay Meydanı No:3", "Ankara", "Ankara", "06420", "Turkey"),
--- (8, 8, "Konak Cad. No:10", "İzmir", "İzmir", "35220", "Turkey");
+INSERT INTO Address (address_name, user_id, order_id, address_line, city, phone_number, postal_code, country) 
+VALUES 
+('Home Address 1', 1, NULL, '1234 Elm St', 'Istanbul', '555-1234', '34000', 'Turkey'),
+('Work Address 1', 1, NULL, '4567 Oak St', 'Ankara', '555-5678', '06000', 'Turkey'),
+('Home Address 2', 2, NULL, '7890 Pine St', 'Izmir', '555-8765', '35000', 'Turkey'),
+('Work Address 2', 2, NULL, '2345 Maple St', 'Bursa', '555-4321', '16000', 'Turkey'),
+('Home Address 3', 3, NULL, '9876 Birch St', 'Antalya', '555-2345', '07000', 'Turkey'),
+('Work Address 3', 3, NULL, '3456 Cedar St', 'Konya', '555-6789', '42000', 'Turkey'),
+('Home Address 4', 4, NULL, '6789 Redwood St', 'Mersin', '555-1357', '33000', 'Turkey'),
+('Work Address 4', 4, NULL, '5432 Palm St', 'Adana', '555-2468', '01000', 'Turkey'),
+('Home Address 5', 5, NULL, '1122 Cherry St', 'Gaziantep', '555-3579', '27000', 'Turkey'),
+('Work Address 5', 5, NULL, '2233 Fir St', 'Kayseri', '555-4680', '38000', 'Turkey'),
+('Home Address 1', 1, 4, '1234 Elm St', 'Istanbul', '555-1234', '34000', 'Turkey'),
+('Home Address 1', 1, 3, '1234 Elm St', 'Istanbul', '555-1234', '34000', 'Turkey'),
+('Home Address 1', 1, 1, '1234 Elm St', 'Istanbul', '555-1234', '34000', 'Turkey'),
+('Home Address 1', 1, 2, '1234 Elm St', 'Istanbul', '555-1234', '34000', 'Turkey');
 
 -- Insert into ShoppingCart for Registered Users
 INSERT INTO ShoppingCart (cart_id, user_id, session_id, created_at, updated_at)
@@ -331,30 +333,39 @@ VALUES
 (7, 7, 7, 5, "Delightful and aromatic.", TRUE, "2024-12-07 18:30:00"),
 (8, 8, 8, 4, "Good quality coffee.", TRUE, "2024-12-08 19:45:00");
 
--- INSERT INTO Orders (order_id, user_id, total_price, status, delivery_option_id, created_at, updated_at)
--- VALUES
--- -- Orders for User 1
--- (1, 1, 1500.00, "delivered", 1, "2024-11-01 10:00:00", "2024-11-05 15:00:00"),
--- (2, 1, 800.00, "delivered", 2, "2024-11-15 12:30:00", "2024-11-17 18:00:00"),
--- (3, 1, 300.00, "delivered", 1, "2024-12-01 09:45:00", "2024-12-06 14:30:00"),
-
--- -- Orders for User 2
--- (4, 2, 500.00, "in-transit", 1, "2024-12-05 11:20:00", "2024-12-05 11:20:00"),
-
--- -- Orders for User 3
--- (5, 3, 2500.00, "processing", 3, "2024-12-07 08:15:00", "2024-12-07 08:15:00"),
-
--- -- Orders for User 5
--- (6, 5, 750.00, "delivered", 2, "2024-11-20 14:50:00", "2024-11-23 16:00:00"),
-
--- -- Orders for User 6
--- (7, 6, 1200.00, "delivered", 1, "2024-10-25 16:30:00", "2024-10-30 10:00:00"),
--- (8, 6, 600.00, "in-transit", 2, "2024-12-02 13:40:00", "2024-12-02 13:40:00"),
-
--- -- Orders for User 8
--- (9, 8, 900.00, "processing", 3, "2024-12-06 17:25:00", "2024-12-06 17:25:00");
 
 
+INSERT INTO Orders (order_id,user_id, total_price, status, delivery_option_id, created_at, updated_at)
+VALUES
+-- Order 1 by Arya Hassibi
+(1, 1, 1350.00, 'processing', 1, '2025-01-10 10:15:00', '2025-01-10 10:15:00'),
+(2, 1, 2250.00, 'in-transit', 2, '2025-01-11 14:30:00', '2025-01-12 09:45:00'),
+(3, 1, 1200.00, 'delivered', 3, '2024-11-09 08:20:00', '2025-01-11 16:50:00'),
+(4, 1, 950.00, 'canceled', 1, '2025-01-12 11:00:00', '2025-01-12 12:00:00'),
+(5, 1, 1275.00, 'delivered', 2, '2025-01-13 09:10:00', '2025-01-13 09:10:00');
+
+INSERT INTO OrderItems (order_id, variant_id, quantity, price_at_purchase)
+VALUES
+-- OrderItems for Order 1
+(1, 1, 1, 500.00),   -- Variant 1: ETH-YIR-250
+(1, 5, 1, 850.00),   -- Variant 5: COL-SUP-500),
+
+-- OrderItems for Order 2
+(2, 10, 1, 1100.00), -- Variant 10: SUM-MAN-500
+(2, 22, 1, 1150.00), -- Variant 22: TAN-PEA-500),
+
+-- OrderItems for Order 3
+(3, 19, 1, 1200.00), -- Variant 34: YEM-MOH-500
+
+-- OrderItems for Order 4
+(4, 2, 1, 950.00),    -- Variant 2: ETH-YIR-500
+
+-- OrderItems for Order 5
+(5, 12, 1, 575.00),   -- Variant 21: TAN-PEA-250
+(5, 28, 1, 700.00);   -- Variant 28: PAN-GEI-250
+
+
+-- The Following data insertions are commented out to avoid conflicts since they are dynamicly generated in the application.
 -- INSERT INTO Payments (payment_id, order_id, user_id, payment_date, amount, card_holder_name, card_number, card_expiration, cvv)
 -- VALUES
 -- (1, 1, 1, "2024-11-01 10:05:00", 1500.00, "Arya Hassibi", AES_ENCRYPT("4111111111111111", "encryption_key"), "2026-05-01", AES_ENCRYPT("123", "encryption_key")),
@@ -372,7 +383,6 @@ VALUES
 -- (1, 2, 1, "2024-11-20 10:00:00", "approved", "Product arrived damaged."),
 -- (2, 4, 2, "2024-12-10 12:00:00", "pending", "Wrong product delivered."),
 -- (3, 7, 6, "2024-10-30 09:30:00", "rejected", "No reason provided.");
-
 
 -- INSERT INTO ReturnItems (return_item_id, refund_request_id, product_id, quantity, price_at_purchase, reason)
 -- VALUES
@@ -394,11 +404,11 @@ VALUES
 
 INSERT INTO Discounts (discount_id, discount_type, value, start_date, end_date, variant_id, active)
 VALUES
-(1, "percentage", 10.00, "2024-12-01", "2025-12-31", 1, FALSE),
-(2, "fixed", 50.00, "2024-11-15", "2025-11-30", 5, FALSE),
+(1, "percentage", 10.00, "2024-12-01", "2025-12-31", 13, TRUE),
+(2, "fixed", 50.00, "2024-11-15", "2025-11-30", 4, TRUE),
 (3, "percentage", 15.00, "2024-10-01", "2025-10-31", 9, FALSE),
-(4, "fixed", 100.00, "2024-12-05", "2025-12-20", 28, FALSE),
-(5, "percentage", 5.00, "2024-12-10", "2025-12-25", 16, FALSE);
+(4, "fixed", 100.00, "2024-12-05", "2025-12-20", 27, TRUE),
+(5, "percentage", 5.00, "2024-12-10", "2025-12-25", 16, TRUE);
 
 INSERT INTO Wishlist (wishlist_id, user_id, created_at)
 VALUES
