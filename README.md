@@ -5,11 +5,13 @@
       <img      alt="Fallback image description"    src="https://raw.githubusercontent.com/aryahassibi/Compresso-Store/main/docs/assets/logo-light.svg"     width=400px>
     </picture>
     <br>
-    Coffee Store
+    Full-stack E-Commerce Coffee Beans Store
+    <br>
+    <img src="https://img.shields.io/badge/stack-react%20%7C%20node.js%20%7C%20mysql-blue" alt="Stack"/>
 </p>
 
 # 
-**Compresso Coffee Store** is a full-stack web application that implements the core features of an online shop using React, Node.js, and MySQL.
+**Compresso Coffee Store** is a **full-stack web application** that implements the core features of an online shop ( + auth, order tracking, reviews, admin dashboard) using **React**, **Node.js**, and **MySQL**.
 The goal is not to mimic a production marketplace but to provide a clear, complete, and maintainable example of how the pieces of an e-commerce system fit together, from user authentication to order tracking and admin operations.
 
 
@@ -54,7 +56,7 @@ The goal is not to mimic a production marketplace but to provide a clear, comple
 
 
 ## 📍 Quick Start (Docker)
-The project is containerized with Docker for easy setup and deployment. For complete development instructions, see the [Development Guide](./DEVELOPMENT.md). Here are the most essential commands to boot up the application:
+The project is containerized with Docker for easy setup and deployment. For complete development instructions, see the [Development Guide 📖](./DEVELOPMENT.md). Here are the most essential commands to boot up the application:
 
 ```bash 
 # 1. install Docker Desktop from https://www.docker.com/products/docker-desktop
