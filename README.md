@@ -6,7 +6,7 @@
     </picture>
     <br>
     Full-stack E-Commerce Coffee Beans Store
-    <br>
+    <br><br>
     <img src="https://img.shields.io/badge/stack-react%20%7C%20node.js%20%7C%20mysql-blue" alt="Stack"/>
 </p>
 
