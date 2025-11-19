@@ -49,7 +49,7 @@ To keep our project organized:
 2. **Commit Frequency:** Each member aims for at least five meaningful commits per sprint.
 3. **PR Reviews:** All pull requests require review and approval from at least one teammate before merging.
 
-Checkout our [Git Guide](docs/Git_Guide.md) for mor info about our system and useful commands.
+Checkout our [Git Guide](docs/GIT_GUIDE.md) for mor info about our system and useful commands.
 
 ## 📍 Workflow Overview
 
