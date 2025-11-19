@@ -56,7 +56,7 @@ The goal is not to mimic a production marketplace but to provide a clear, comple
 
 
 ## 📍 Quick Start (Docker)
-The project is containerized with Docker for easy setup and deployment. For complete development instructions, see the [Development Guide 📖](./DEVELOPMENT.md). Here are the most essential commands to boot up the application:
+The project is containerized with Docker for easy setup and deployment. For complete development instructions, see the [Development Guide 📖](./docs/DEVELOPMENT.md). Here are the most essential commands to boot up the application:
 
 ```bash 
 # 1. install Docker Desktop from https://www.docker.com/products/docker-desktop
