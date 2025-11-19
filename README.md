@@ -1,144 +1,101 @@
-# Compresso Coffee Store
+<p align="center">
+    <picture>
+      <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/aryahassibi/Compresso-Store/main/docs/assets/logo-light.svg"  width=400px>
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/aryahassibi/Compresso-Store/main/docs/assets/logo-dark.svg"   width=400px>
+      <img      alt="Fallback image description"    src="https://raw.githubusercontent.com/aryahassibi/Compresso-Store/main/docs/assets/logo-light.svg"     width=400px>
+    </picture>
+    <br>
+    Full-stack E-Commerce Coffee Beans Store
+    <br>
+    <img src="https://img.shields.io/badge/stack-react%20%7C%20node.js%20%7C%20mysql-blue" alt="Stack"/>
+</p>
 
-Welcome to the Compresso Coffee Store! This is the official GitHub repository for Team 07’s project in CS 308 - Software Engineering at Sabanci University. We’re a team of six working to build a functional, secure, and visually appealing online store for our unique coffee brand, **Compresso**.
+# 
+**Compresso Coffee Store** is a **full-stack web application** that implements the core features of an online shop ( + auth, order tracking, reviews, admin dashboard) using **React**, **Node.js**, and **MySQL**.
+The goal is not to mimic a production marketplace but to provide a clear, complete, and maintainable example of how the pieces of an e-commerce system fit together, from user authentication to order tracking and admin operations.
+
+
+> [!NOTE]
+> This project was originally developed as a group project for **CS308 – Software Engineering** at Sabancı University, through the hard work of: 
+> **Mustafa Topcu, Beste Bayhan, Eid Alhamali, and Ecem Akın, Orhun Ege Ozpay, Arya Hassibi**.    
+> We followed **Scrum**, used **Jira**, and organized development using **Git Flow**.  
+>
+> The original course submission is preserved under the tag [**`team-demo-v1.0.0`**](https://github.com/aryahassibi/Compresso-Store/tree/team-demo-v1.0.0) and in the archival repo [**`aryahassibi/TEAM07`**](https://github.com/aryahassibi/TEAM07).    
+> After the course, I have continued the project on my own, trying to refactor, polish, and extend it further.
+
+---
 
 ## 📍 Key Features
 
-- **Browse and Purchase:** Users can explore coffee products, check availability, add items to their cart, and place orders.
-- **User Authentication:** Customers can register, log in, and securely manage their accounts.
-- **Order Tracking:** Order statuses are updated in real-time (e.g., "processing," "in-transit," "delivered").
-- **Product Reviews:** Customers can rate and comment on products, pending manager approval.
-- **Search and Filter:** Users can search by product name and sort by price or popularity.
-- **Admin Interface:** A dedicated section for managers to handle inventory, manage discounts, and view analytics.
+- **Full E-Commerce Flow**  
+    Implemented all major user flows of an online store: product discovery, availability checks, cart management, and order placement
+
+- **Secure User Authentication**    
+    Registration, login, and account management are implemented using JWT-based authentication and role-aware access control.
+
+- **End-to-End Order Lifecycle Tracking**    
+    Real-time order progress through structured states: 
+    *processing ⇢ in-transit ⇢ delivered*.
+
+- **Moderated Review & Feedback System**  
+    Customers can rate and comment on products. Submissions are reviewed and approved by managers.
+    
+- **Search, Filtering & Sorting**  
+    Server-supported search, filtering, and sorting (price, name, popularity) enable efficient product discovery.
+
+- **Admin Panel**  
+    A dedicated section to manage inventory, discounts, product visibility, and essential operational analytics.
+
 
 ## 📍 Tech Stack
-
-- **Frontend:** React, Axios
-- **Backend:** Node.js, Express
+- **Frontend:** React, Axios — modern state and data flow patterns
+- **Backend:** Node.js, Express — REST API, modular controllers, middleware-driven requests
 - **Database:** MySQL
 - **Containerization:** Docker
 - **Version Control:** Git, GitHub
 
-## 📍 Team Members
 
-- Arya Hassibi
-- Beste Bayhan
-- Mustafa Topcu
-- Orhun Ege Ozpay
-- Eid Alhamali
-- Ecem Akın
+## 📍 Quick Start (Docker)
+The project is containerized with Docker for easy setup and deployment. For complete development instructions, see the [Development Guide 📖](./DEVELOPMENT.md). Here are the most essential commands to boot up the application:
 
-## 📍 Development Roadmap
+```bash 
+# 1. install Docker Desktop from https://www.docker.com/products/docker-desktop
+# 2. Clone the repository
+# 3. Create a .env file in the project root (see Development Guide for contents)
 
-### Project SCRUM Schedule
-We follow a SCRUM approach with two-week sprints, culminating in bi-weekly demos as outlined below:
+# Start all services
+docker-compose up --build
+```
 
-- **Sprint 1:** Initial setup, basic UI, and data modeling
-- **Sprint 2:** Product Display, User Account Setup, and Shopping Cart
-- **Sprint 3:** Order Tracking and Review System
-- **Sprint 4:** Wishlist, Admin Review Management, and System Optimizations
-- **Sprint 5:** Final Testing, Debugging, and Demo Preparation
+Access the app:
+* **Frontend:** [`http://localhost:3000`](http://localhost:3000)
+* **Backend:** [`http://localhost:5001`](http://localhost:5001)
 
-Jira is used to manage tasks and track progress. Each sprint begins with a planning meeting to assign tasks and ends with a sprint review to showcase completed features.
+To stop and remove containers:
 
-## 📍 Git and GitHub Guidelines
-
-To keep our project organized:
-
-1. **Branching:** We follow the Git Flow model, with separate branches for features, development, and main releases.
-2. **Commit Frequency:** Each member aims for at least five meaningful commits per sprint.
-3. **PR Reviews:** All pull requests require review and approval from at least one teammate before merging.
-
-Checkout our [Git Guide](docs/Git_Guide.md) for mor info about our system and useful commands.
-
-## 📍 Workflow Overview
-
-Here’s a quick roadmap to get you set up and moving forward effectively.
-
-### 1. Set Up Your Development Environment
-
-- **Install Prerequisites**: Make sure you have **Docker** installed.
-- **Clone the Project Repository**:  
-    ```bash
-    git clone https://github.com/aryahassibi/TEAM07.git
-    cd TEAM07
-    ```
-- **Create Environment Variables**: Add a `.env` file in the project root to manage sensitive data:
-    ```
-    PORT=5000
-    DB_HOST=db
-    DB_USER=root
-    DB_PASS=
-    DB_NAME=ecommerce_db
-    JWT_SECRET=JWTSECRET
-    ```
-    The `DB_PASS` field should be left empty since for now during the development phase, the database is modified to accept empty passwords.
-
-### 2. Start Services with Docker
-- Download and install Docker Desktop from [here](https://www.docker.com/products/docker-desktop).
-- Verify Docker is running by checking:
-    ```bash
-    docker --version
-    ```
-- **Run the Project in Docker**: Start all services (backend, frontend, database) with:
-    ```bash
-    docker-compose up --build
-    ```
-    The first time you run this command you might get an error and your may able ot resolve it easirly by stopping the application (press `Ctrl+C` in the terminal) and running the command again. 
-- **Access Services**:
-    - **Frontend**: [http://localhost:3000](http://localhost:3000)
-    - **Backend**: [http://localhost:5001](http://localhost:5001)
-- **Stopping and Removing Docker Containers**
-    To stop the running containers, press `Ctrl+C` in the terminal, then run:
-    ```bash
-    docker-compose down
-    ```
-    This will stop and remove the containers. However, the data will persist in the database volume. If you want to remove the data as well, run:
-    ```bash
-    docker-compose down -v
-    ```
-    This command stops and removes the containers and associated volumes, effectively resetting the database and other persistent data.
-> [!TIP]
-> These commands can also be used to resolve Docker errors by ensuring a clean state before restarting the services.
+```bash
+docker-compose down
+# or
+docker-compose down -v   # also resets database
+```
 
 
-### 3. Choose Your Task and Branch
+## 👥 Original Team Credits
 
-- **Sync the Latest Code**:
-    ```bash
-    git pull origin develop
-    ```
-- **Create a Feature Branch** for your task (replace `your-feature` with your task name):
-    ```bash
-    git checkout -b feature/your-feature
-    ```
+* Beste Bayhan
+* Mustafa Topcu
+* Orhun Ege Ozpay
+* Eid Alhamali
+* Ecem Akın
+* Arya Hassibi
 
-### 4. Code, Test, and Push
+#
 
-- **Develop**: Write your code and test it locally. Make sure API calls (from React) to the backend work smoothly.
-- **Commit Changes** using the format: `type(scope): message`
-    ```bash
-    # Stage the changes you want to commit
-    git add .
-    ```
-    ```bash
-    git commit -m "type(scope): message"
-    ```
-- **Push Your Branch**:
-    ```bash
-    git push origin feature/your-feature
-    ```
-
-### 5. Open a Pull Request (PR)
-
-- On [GitHub](https://github.com/aryahassibi/TEAM07.git), submit a **Pull Request to the `develop` branch** and request a review. 
-- Once approved by a at least one of your teammates, you’re ready to merge.
-
-### Best Practices
-
-- Use **environment variables** (like the '.env' file) for sensitive data. Never hard-code passwords, tokens, or keys in the code.
-
-
-
-For detailed instructions on setting up the project, initializing the tech stack, and managing version control, please refer to the [Project Setup Guide](./PROJECT_SETUP_GUIDE.md).
-
+<p align="center">
+    <picture>
+      <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/aryahassibi/Compresso-Store/main/docs/assets/logo-light.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/aryahassibi/Compresso-Store/main/docs/assets/logo-dark.svg">
+      <img      alt="Fallback image description"    src="https://raw.githubusercontent.com/aryahassibi/Compresso-Store/main/docs/assets/logo-light.svg">
+    </picture>
+    <br>
+</p>
