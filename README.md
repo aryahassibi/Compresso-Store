@@ -1,7 +1,15 @@
+<p align="center">
+    <picture>
+      <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/aryahassibi/Compresso-Store/main/docs/assets/logo-light.svg"  width=400px>
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/aryahassibi/Compresso-Store/main/docs/assets/logo-dark.svg"   width=400px>
+      <img      alt="Fallback image description"    src="https://raw.githubusercontent.com/aryahassibi/Compresso-Store/main/docs/assets/logo-light.svg"     width=400px>
+    </picture>
+    <br>
+    Coffee Store
+</p>
 
-# Compresso Coffee Store
-
-Compresso Coffee Store is a full-stack web application that implements the core features of an online shop using React, Node.js, and MySQL.
+# 
+**Compresso Coffee Store** is a full-stack web application that implements the core features of an online shop using React, Node.js, and MySQL.
 The goal is not to mimic a production marketplace but to provide a clear, complete, and maintainable example of how the pieces of an e-commerce system fit together, from user authentication to order tracking and admin operations.
 
 
@@ -78,3 +86,14 @@ docker-compose down -v   # also resets database
 * Eid Alhamali
 * Ecem Akın
 * Arya Hassibi
+
+#
+
+<p align="center">
+    <picture>
+      <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/aryahassibi/Compresso-Store/main/docs/assets/logo-light.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/aryahassibi/Compresso-Store/main/docs/assets/logo-dark.svg">
+      <img      alt="Fallback image description"    src="https://raw.githubusercontent.com/aryahassibi/Compresso-Store/main/docs/assets/logo-light.svg">
+    </picture>
+    <br>
+</p>
