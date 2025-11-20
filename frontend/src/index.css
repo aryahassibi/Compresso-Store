@@ -74,13 +74,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 .main-content {
-  padding-top: 66px; /*Match navbar height */
-  background-color: var(--background);
-  margin: 0;
-}
-
-.main-content {
-  padding-top: 66px; /*Match navbar height */
+  padding-top: 79px; 
+  /*Match navbar height */
   background-color: var(--background);
   margin: 0;
 }
