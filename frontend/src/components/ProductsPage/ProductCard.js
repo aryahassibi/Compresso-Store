@@ -11,7 +11,7 @@ import wishlistIconFilled from "../../assets/images/icons/wishlist/wishlist-dark
 import starIcon from "../../assets/images/icons/star.svg"; // Import star icon
 
 
-const ProductCard = ({ product, onAddToCart }) => {
+const ProductCard = ({ product, onAddToCart, onShowToast }) => {
     const {
         name,
         price,
@@ -92,7 +92,7 @@ const ProductCard = ({ product, onAddToCart }) => {
 
     const handleWishlistClick = (e) => {
         e.preventDefault(); // Prevent navigation
-        toggleWishlist(variant_id, isWishlist, setIsWishlist); 
+        toggleWishlist(variant_id, isWishlist, setIsWishlist, onShowToast); 
     };
 
     const handleImageError = (event) => {
@@ -194,6 +194,7 @@ ProductCard.propTypes = {
 
     }).isRequired,
     onAddToCart: PropTypes.func.isRequired,
+    onShowToast: PropTypes.func,
 };
 
 export default ProductCard;

@@ -5,7 +5,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: calc(100vh - 72px);
+    padding: 40px 0;
+    box-sizing: border-box;
 }
 
 .login-container {

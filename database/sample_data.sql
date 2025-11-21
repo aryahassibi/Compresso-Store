@@ -9,25 +9,7 @@ VALUES
 (4, "Orhun Ege", "Ozpay", "orhun@user.com", "+905304567890", "45678901234", SHA2("password", 256)),
 (5, "Eid", "Alhamali", "eid@user.com", "+905305678901", "56789012345", SHA2("password", 256)),
 (6, "Ecem", "Akın", "ecem@user.com", "+905306789012", "67890123456", SHA2("password", 256)),
-(9, "Test", "User", "test@user.com", "+905309012345", "90123456789", SHA2("password", 256));
-
--- Note: Passwords are all "password"
-INSERT INTO Managers (manager_id, first_name, last_name, email, password_hash, role)
-VALUES
-(1, "Arya", "Hassibi", "arya@manager.com", SHA2("admin12345", 256), "sales_manager"),
-(2, "Beste", "Bayhan", "beste@manager.com", SHA2("admin12345", 256), "product_manager"),
-(3, "Mustafa", "Topcu", "mustafa@manager.com", SHA2("admin12345", 256), "sales_manager"),
-(4, "Orhun", "Ege Ozpay", "orhun@manager.com", SHA2("admin12345", 256), "product_manager"),
-(5, "Eid", "Alhamali", "eid@manager.com", SHA2("admin12345", 256), "sales_manager"),
-(6, "Ecem", "Akın", "ecem@manager.com", SHA2("admin12345", 256), "product_manager"),
-(9, "Sales", "Manager", "sales@manager.com", SHA2("admin12345", 256), "sales_manager"),
-(10, "Product", "Manager", "product@manager.com", SHA2("admin12345", 256), "product_manager")
-ON DUPLICATE KEY UPDATE 
-    first_name = VALUES(first_name),
-    last_name = VALUES(last_name),
-    email = VALUES(email),
-    password_hash = VALUES(password_hash),
-    role = VALUES(role);
+(7, "Test", "User", "test@user.com", "+905309012345", "90123456789", SHA2("password", 256));
 
 INSERT INTO Categories (category_id, name, description)
 VALUES
@@ -45,15 +27,15 @@ VALUES
 
 INSERT INTO Products (product_id, name, origin, roast_level, bean_type, grind_type, flavor_profile, processing_method, caffeine_content, category_id, description, warranty_status, distributor_info)
 VALUES
-(1, "Product C | Sunrise Over the Serengeti", "Tanzania", "Light", "Arabica", "Whole Bean", "Citrus and floral whispers", "Washed", "High", 1, 
+(1, "Sunrise Over the Serengeti", "Tanzania", "Light", "Arabica", "Whole Bean", "Citrus and floral whispers", "Washed", "High", 1, 
     "Like the first light kissing the vast plains of the Serengeti, this coffee feels alive. Notes of citrus and delicate florals bloom with every sip, reminding you of new beginnings and untamed beauty.", 
     FALSE, "Tanzanian Treasures Ltd."),
 
-(2, "Product B | Bolivian Echoes", "Bolivia", "Medium", "Blend", "Ground", "Nutty with a whisper of cocoa", "Honey-processed", "Half-Caf", 2, 
+(2, " Bolivian Echoes", "Bolivia", "Medium", "Blend", "Ground", "Nutty with a whisper of cocoa", "Honey-processed", "Half-Caf", 2, 
     "A quiet symphony that lingers in the soul like the echoes of Andean pan flutes. Its nutty richness and subtle cocoa notes evoke mountain trails and misty mornings.", 
     TRUE, "Bolivia Bean Collective"),
 
-(3, "Product A | The Midnight Drifter", "Ethiopia", "Espresso", "Arabica", "Ground", "Dark chocolate and blackberry", "Natural", "High", 3, 
+(3, "The Midnight Drifter", "Ethiopia", "Espresso", "Arabica", "Ground", "Dark chocolate and blackberry", "Natural", "High", 3, 
     "A bold companion for sleepless nights and untold stories. Its intense dark chocolate depth and blackberry intrigue feel like wandering under a canopy of stars.", 
     FALSE, "Ethiopian Coffee Routes"),
 
@@ -83,48 +65,48 @@ VALUES
 
 (10, "Panama Geisha Dream", "Panama", "Light", "Arabica", "Whole Bean", "Jasmine and tropical fruit", "Washed", "High", 3, 
     "An ethereal experience. Jasmine notes entwined with tropical fruit sweetness make this a coffee to savor slowly, like a daydream slipping into reality.", 
-    TRUE, "Panama Coffee Treasures"),
+    TRUE, "Panama Coffee Treasures");
 
-(11, "Mexican Firewood", "Mexico", "French", "Blend", "Ground", "Smoke and spiced chocolate", "Other", "Half-Caf", 1, 
-    "A robust brew that feels like sitting by a crackling fire in the Mexican highlands. Smoke and spiced chocolate warmth make this a grounding companion.", 
-    FALSE, "Mexican Coffee Collective"),
+-- (11, "Mexican Firewood", "Mexico", "French", "Blend", "Ground", "Smoke and spiced chocolate", "Other", "Half-Caf", 1, 
+--     "A robust brew that feels like sitting by a crackling fire in the Mexican highlands. Smoke and spiced chocolate warmth make this a grounding companion.", 
+--     FALSE, "Mexican Coffee Collective"),
 
-(12, "Peruvian Secret Garden", "Peru", "Medium", "Arabica", "Whole Bean", "Floral and honey", "Washed", "Decaf", 2, 
-    "Soft as the petals of an unseen bloom, this coffee whispers of a hidden garden. Its floral and honey notes unfold gently, like secrets in the air.", 
-    TRUE, "Peruvian Heritage Beans"),
+-- (12, "Peruvian Secret Garden", "Peru", "Medium", "Arabica", "Whole Bean", "Floral and honey", "Washed", "Decaf", 2, 
+--     "Soft as the petals of an unseen bloom, this coffee whispers of a hidden garden. Its floral and honey notes unfold gently, like secrets in the air.", 
+--     TRUE, "Peruvian Heritage Beans"),
 
-(13, "Yemen Desert Mirage", "Yemen", "Dark", "Blend", "Whole Bean", "Chocolate and fig", "Natural", "High", 5, 
-    "Like a rare vision in the shifting sands, this coffee is a treasure of chocolate richness and fig sweetness. A mirage worth chasing.", 
-    FALSE, "Yemeni Coffee Routes"),
+-- (13, "Yemen Desert Mirage", "Yemen", "Dark", "Blend", "Whole Bean", "Chocolate and fig", "Natural", "High", 5, 
+--     "Like a rare vision in the shifting sands, this coffee is a treasure of chocolate richness and fig sweetness. A mirage worth chasing.", 
+--     FALSE, "Yemeni Coffee Routes"),
 
-(14, "Vietnamese Bold Horizon", "Vietnam", "French", "Robusta", "Ground", "Bold with caramel undertones", "Washed", "High", 1, 
-    "A daring blend that pushes boundaries. Its boldness and caramel undertones embody the resilience and spirit of Vietnam.", 
-    FALSE, "Vietnam Coffee Collective"),
+-- (14, "Vietnamese Bold Horizon", "Vietnam", "French", "Robusta", "Ground", "Bold with caramel undertones", "Washed", "High", 1, 
+--     "A daring blend that pushes boundaries. Its boldness and caramel undertones embody the resilience and spirit of Vietnam.", 
+--     FALSE, "Vietnam Coffee Collective"),
 
-(15, "Kenyan Red Sunset", "Kenya", "Dark", "Arabica", "Ground", "Berry and wine", "Natural", "High", 5, 
-    "Rich as a Kenyan sunset fading to red, this coffee's berry and wine notes evoke a boldness that commands attention.", 
-    FALSE, "Kenyan Bean Collective"),
+-- (15, "Kenyan Red Sunset", "Kenya", "Dark", "Arabica", "Ground", "Berry and wine", "Natural", "High", 5, 
+--     "Rich as a Kenyan sunset fading to red, this coffee's berry and wine notes evoke a boldness that commands attention.", 
+--     FALSE, "Kenyan Bean Collective"),
 
-(16, "Honduran Stargazer", "Honduras", "Medium", "Arabica", "Whole Bean", 
-    "Sweet and herbal", "Washed", "Decaf", 4, 
-    "A coffee for quiet nights under infinite skies. Sweetness and herbal notes blend in harmony, like constellations above.", 
-    TRUE, "Honduran Coffee Routes"),
+-- (16, "Honduran Stargazer", "Honduras", "Medium", "Arabica", "Whole Bean", 
+--     "Sweet and herbal", "Washed", "Decaf", 4, 
+--     "A coffee for quiet nights under infinite skies. Sweetness and herbal notes blend in harmony, like constellations above.", 
+--     TRUE, "Honduran Coffee Routes"),
 
-(17, "Laos Whispering Rain", "Laos", "Medium", "Blend", "Whole Bean", "Nutty with soft spice", "Natural", "Half-Caf", 4, 
-    "Gentle as rain on lush green fields, this coffee offers nutty warmth with a touch of spice. It feels like a quiet conversation with nature.", 
-    TRUE, "Laos Coffee Collective"),
+-- (17, "Laos Whispering Rain", "Laos", "Medium", "Blend", "Whole Bean", "Nutty with soft spice", "Natural", "Half-Caf", 4, 
+--     "Gentle as rain on lush green fields, this coffee offers nutty warmth with a touch of spice. It feels like a quiet conversation with nature.", 
+--     TRUE, "Laos Coffee Collective"),
 
-(18, "Turkish Caravan Tale", "Turkey", "French", "Blend", "Ground", "Cardamom and dark chocolate", "Other", "High", 2, 
-    "Rich, spiced, and complex as the tales of caravans crossing ancient lands. Cardamom and dark chocolate transport you to a world of wonder.", 
-    FALSE, "Turkish Coffee Routes"),
+-- (18, "Turkish Caravan Tale", "Turkey", "French", "Blend", "Ground", "Cardamom and dark chocolate", "Other", "High", 2, 
+--     "Rich, spiced, and complex as the tales of caravans crossing ancient lands. Cardamom and dark chocolate transport you to a world of wonder.", 
+--     FALSE, "Turkish Coffee Routes"),
 
-(19, "Colombian Daybreak", "Colombia", "Light", "Arabica", "Ground", "Bright and citrusy", "Washed", "High", 2, 
-    "Fresh as dawn breaking over Colombian hills, this coffee's brightness awakens the senses and inspires hope for the day ahead.", 
-    TRUE, "Colombian Coffee Legends"),
+-- (19, "Colombian Daybreak", "Colombia", "Light", "Arabica", "Ground", "Bright and citrusy", "Washed", "High", 2, 
+--     "Fresh as dawn breaking over Colombian hills, this coffee's brightness awakens the senses and inspires hope for the day ahead.", 
+--     TRUE, "Colombian Coffee Legends"),
 
-(20, "Ecuadorian High Spirits", "Ecuador", "Medium", "Blend", "Whole Bean", "Cocoa and citrus", "Natural", "High", 4, 
-    "Uplifting and bright, this coffee's cocoa depth and citrus zing feel like a celebration in a cup. A tribute to life's vibrant highs.", 
-    TRUE, "Ecuadorian Coffee Routes");
+-- (20, "Ecuadorian High Spirits", "Ecuador", "Medium", "Blend", "Whole Bean", "Cocoa and citrus", "Natural", "High", 4, 
+--     "Uplifting and bright, this coffee's cocoa depth and citrus zing feel like a celebration in a cup. A tribute to life's vibrant highs.", 
+--     TRUE, "Ecuadorian Coffee Routes");
 
 INSERT INTO Product_Variant (variant_id, product_id, weight_grams, price, stock, sku)
 VALUES
@@ -165,44 +147,44 @@ VALUES
 
 -- Product 10 Variants
 (18, 10, 250, 510.00, 0, "HON-MAR-250"),        -- Out of stock
-(19, 10, 500, 1000.00, 1, "HON-MAR-500"),       -- Only 1 left in stock
+(19, 10, 500, 1000.00, 1, "HON-MAR-500");       -- Only 1 left in stock
 
 -- Product 11 Variants
-(20, 11, 250, 495.00, 130, "PER-SIG-250"),
+-- (20, 11, 250, 495.00, 130, "PER-SIG-250"),
 
--- Product 12 Variants
-(21, 12, 250, 575.00, 90, "TAN-PEA-250"),
-(22, 12, 500, 1150.00, 1, "TAN-PEA-500"),       -- Only 1 left in stock
-(23, 12, 1000, 2200.00, 20, "TAN-PEA-1000"),
+-- -- Product 12 Variants
+-- (21, 12, 250, 575.00, 90, "TAN-PEA-250"),
+-- (22, 12, 500, 1150.00, 1, "TAN-PEA-500"),       -- Only 1 left in stock
+-- (23, 12, 1000, 2200.00, 20, "TAN-PEA-1000"),
 
--- Product 13 Variants
-(24, 13, 250, 610.00, 80, "PNG-SIG-250"),
+-- -- Product 13 Variants
+-- (24, 13, 250, 610.00, 80, "PNG-SIG-250"),
 
--- Product 14 Variants
-(25, 14, 250, 540.00, 100, "RWA-BUR-250"),
-(26, 14, 500, 1080.00, 50, "RWA-BUR-500"),
+-- -- Product 14 Variants
+-- (25, 14, 250, 540.00, 100, "RWA-BUR-250"),
+-- (26, 14, 500, 1080.00, 50, "RWA-BUR-500"),
 
--- Product 15 Variants
-(27, 15, 250, 505.00, 120, "ELS-PAC-250"),
+-- -- Product 15 Variants
+-- (27, 15, 250, 505.00, 120, "ELS-PAC-250"),
 
--- Product 16 Variants
-(28, 16, 250, 700.00, 60, "PAN-GEI-250"),
-(29, 16, 500, 1350.00, 0, "PAN-GEI-500"),       -- Out of stock
-(30, 16, 1000, 2600.00, 15, "PAN-GEI-1000"),
+-- -- Product 16 Variants
+-- (28, 16, 250, 700.00, 60, "PAN-GEI-250"),
+-- (29, 16, 500, 1350.00, 0, "PAN-GEI-500"),       -- Out of stock
+-- (30, 16, 1000, 2600.00, 15, "PAN-GEI-1000"),
 
--- Product 17 Variants
-(31, 17, 250, 380.00, 200, "VIE-ROB-250"),
+-- -- Product 17 Variants
+-- (31, 17, 250, 380.00, 200, "VIE-ROB-250"),
 
--- Product 18 Variants
-(32, 18, 250, 550.00, 100, "IND-MON-250"),
+-- -- Product 18 Variants
+-- (32, 18, 250, 550.00, 100, "IND-MON-250"),
 
--- Product 19 Variants
-(33, 19, 250, 620.00, 70, "YEM-MOH-250"),
-(34, 19, 500, 1200.00, 1, "YEM-MOH-500"),       -- Only 1 left in stock
+-- -- Product 19 Variants
+-- (33, 19, 250, 620.00, 70, "YEM-MOH-250"),
+-- (34, 19, 500, 1200.00, 1, "YEM-MOH-500"),       -- Only 1 left in stock
 
--- Product 20 Variants
-(35, 20, 250, 500.00, 0, "LAO-BOL-250"),
-(36, 20, 500, 980.00, 40, "LAO-BOL-500");       -- Out of stock
+-- -- Product 20 Variants
+-- (35, 20, 250, 500.00, 0, "LAO-BOL-250"),
+-- (36, 20, 500, 980.00, 40, "LAO-BOL-500");       -- Out of stock
 
 INSERT INTO Product_Images (image_id, variant_id, image_url, alt_text)
 VALUES
@@ -234,36 +216,101 @@ VALUES
 (17, 17, "/assets/images/products/product9.png", "Santiago at Dusk 250g"),
 
 (18, 18, "/assets/images/products/product10.png", "Panama Geisha Dream 250g"),
-(19, 19, "/assets/images/products/product10.png", "Panama Geisha Dream 500g"),
+(19, 19, "/assets/images/products/product10.png", "Panama Geisha Dream 500g");
 
-(20, 20, "/assets/images/products/product11.png", "Mexican Firewood 250g"),
+-- (20, 20, "/assets/images/products/product11.png", "Mexican Firewood 250g"),
 
-(21, 21, "/assets/images/products/product12.png", "Peruvian Secret Garden 250g"),
-(22, 22, "/assets/images/products/product12.png", "Peruvian Secret Garden 500g"),
-(23, 23, "/assets/images/products/product12.png", "Peruvian Secret Garden 1000g"),
+-- (21, 21, "/assets/images/products/product12.png", "Peruvian Secret Garden 250g"),
+-- (22, 22, "/assets/images/products/product12.png", "Peruvian Secret Garden 500g"),
+-- (23, 23, "/assets/images/products/product12.png", "Peruvian Secret Garden 1000g"),
 
-(24, 24, "/assets/images/products/product13.png", "Yemen Desert Mirage 250g"),
+-- (24, 24, "/assets/images/products/product13.png", "Yemen Desert Mirage 250g"),
 
-(25, 25, "/assets/images/products/product14.png", "Vietnamese Bold Horizon 250g"),
-(26, 26, "/assets/images/products/product14.png", "Vietnamese Bold Horizon 500g"),
+-- (25, 25, "/assets/images/products/product14.png", "Vietnamese Bold Horizon 250g"),
+-- (26, 26, "/assets/images/products/product14.png", "Vietnamese Bold Horizon 500g"),
 
-(27, 27, "/assets/images/products/product15.png", "Kenyan Red Sunset 250g"),
+-- (27, 27, "/assets/images/products/product15.png", "Kenyan Red Sunset 250g"),
 
-(28, 28, "/assets/images/products/product16.png", "Honduran Stargazer 250g"),
-(29, 29, "/assets/images/products/product16.png", "Honduran Stargazer 500g"),
-(30, 30, "/assets/images/products/product16.png", "Honduran Stargazer 1000g"),
+-- (28, 28, "/assets/images/products/product16.png", "Honduran Stargazer 250g"),
+-- (29, 29, "/assets/images/products/product16.png", "Honduran Stargazer 500g"),
+-- (30, 30, "/assets/images/products/product16.png", "Honduran Stargazer 1000g"),
 
-(31, 31, "/assets/images/products/product17.png", "Laos Whispering Rain 250g"),
+-- (31, 31, "/assets/images/products/product17.png", "Laos Whispering Rain 250g"),
 
-(32, 32, "/assets/images/products/product18.png", "Turkish Caravan Tale 250g"),
+-- (32, 32, "/assets/images/products/product18.png", "Turkish Caravan Tale 250g"),
 
-(33, 33, "/assets/images/products/product19.png", "Colombian Daybreak 250g"),
-(34, 34, "/assets/images/products/product19.png", "Colombian Daybreak 500g"),
+-- (33, 33, "/assets/images/products/product19.png", "Colombian Daybreak 250g"),
+-- (34, 34, "/assets/images/products/product19.png", "Colombian Daybreak 500g"),
 
-(35, 35, "/assets/images/products/product20.png", "Ecuadorian High Spirits 250g"),
-(36, 36, "/assets/images/products/product20.png", "Ecuadorian High Spirits 500g");
+-- (35, 35, "/assets/images/products/product20.png", "Ecuadorian High Spirits 250g"),
+-- (36, 36, "/assets/images/products/product20.png", "Ecuadorian High Spirits 500g");
+
+-- Insert into ShoppingCart for Registered Users
+INSERT INTO ShoppingCart (cart_id, user_id, session_id, created_at, updated_at)
+VALUES
+    (1, 1, NULL, "2024-12-01 10:00:00", "2024-12-01 10:00:00"),
+    (2, 2, NULL, "2024-12-02 11:00:00", "2024-12-02 11:00:00"),
+    (3, 3, NULL, "2024-12-03 12:00:00", "2024-12-03 12:00:00"),
+    (4, 4, NULL, "2024-12-04 13:00:00", "2024-12-04 13:00:00"),
+    (5, 5, NULL, "2024-12-05 14:00:00", "2024-12-05 14:00:00"),
+    (6, 6, NULL, "2024-12-06 15:00:00", "2024-12-06 15:00:00"),
+    (7, 7, NULL, "2024-12-07 16:00:00", "2024-12-07 16:00:00");
 
 
+
+INSERT INTO Comments (comment_id, product_id, user_id, rating, content, approved, created_at)
+VALUES
+(1, 1, 1, 5, "Absolutely love the floral notes!", TRUE, "2024-11-02 10:30:00"),
+(2, 2, 2, 4, "Great balance and smooth taste.", TRUE, "2024-11-16 13:45:00"),
+(3, 3, 3, 3, "Too strong for my liking.", FALSE, "2024-12-02 09:15:00"),
+(4, 4, 4, 5, "Bright and fruity, perfect for mornings!", TRUE, "2024-12-03 11:00:00"),
+(5, 5, 5, 4, "Rich and complex flavors.", TRUE, "2024-11-21 16:20:00"),
+(6, 6, 6, 2, "Not as sweet as I expected.", FALSE, "2024-10-26 17:50:00"),
+(7, 7, 3, 5, "Delightful and aromatic.", TRUE, "2024-12-07 18:30:00"),
+(8, 8, 4, 4, "Good quality coffee.", TRUE, "2024-12-08 19:45:00");
+
+
+-- Ensure product averages reflect the sample comments
+UPDATE Products p
+LEFT JOIN (
+    SELECT product_id, AVG(rating) AS avg_rating
+    FROM Comments
+    -- WHERE approved = TRUE
+    GROUP BY product_id
+) ratings ON p.product_id = ratings.product_id
+SET p.average_rating = COALESCE(ratings.avg_rating, 0);
+
+
+INSERT INTO Orders (order_id, user_id, total_price, status, delivery_option_id, created_at, updated_at)
+VALUES
+-- Order 1 by Arya Hassibi
+(1, 1, 1350.00, 'processing', 1, '2025-01-10 10:15:00', '2025-01-10 10:15:00'),
+(2, 1, 2250.00, 'in-transit', 2, '2025-01-11 14:30:00', '2025-01-12 09:45:00'),
+(3, 1, 1200.00, 'delivered', 3, '2024-11-09 08:20:00', '2025-01-11 16:50:00'),
+(4, 1, 950.00, 'canceled', 1, '2025-01-12 11:00:00', '2025-01-12 12:00:00'),
+(5, 1, 1275.00, 'delivered', 2, '2025-01-13 09:10:00', '2025-01-13 09:10:00');
+
+INSERT INTO OrderItems (order_id, variant_id, quantity, price_at_purchase)
+VALUES
+-- OrderItems for Order 1
+(1, 1, 1, 500.00),   -- Variant 1: ETH-YIR-250
+(1, 5, 1, 850.00),   -- Variant 5: COL-SUP-500),
+
+-- OrderItems for Order 2
+(2, 10, 1, 1100.00), -- Variant 10: SUM-MAN-500
+(2, 4, 1, 1150.00), -- Variant 22: TAN-PEA-500),
+
+-- OrderItems for Order 3
+(3, 2, 1, 1200.00), -- Variant 34: YEM-MOH-500
+
+-- OrderItems for Order 4
+(4, 2, 1, 950.00),    -- Variant 2: ETH-YIR-500
+
+-- OrderItems for Order 5
+(5, 12, 1, 575.00),   -- Variant 21: TAN-PEA-250
+(5, 18, 1, 700.00);   -- Variant 28: PAN-GEI-250
+
+-- Addresses (inserted after Orders to satisfy FK constraints)
 INSERT INTO Address (address_name, user_id, order_id, address_line, city, phone_number, postal_code, country) 
 VALUES 
 ('Home Address 1', 1, NULL, '1234 Elm St', 'Istanbul', '555-1234', '34000', 'Turkey'),
@@ -281,133 +328,13 @@ VALUES
 ('Home Address 1', 1, 1, '1234 Elm St', 'Istanbul', '555-1234', '34000', 'Turkey'),
 ('Home Address 1', 1, 2, '1234 Elm St', 'Istanbul', '555-1234', '34000', 'Turkey');
 
--- Insert into ShoppingCart for Registered Users
-INSERT INTO ShoppingCart (cart_id, user_id, session_id, created_at, updated_at)
-VALUES
-    (1, 1, NULL, "2024-12-01 10:00:00", "2024-12-01 10:00:00"),
-    (2, 2, NULL, "2024-12-02 11:00:00", "2024-12-02 11:00:00"),
-    (3, 3, NULL, "2024-12-03 12:00:00", "2024-12-03 12:00:00"),
-    (4, 4, NULL, "2024-12-04 13:00:00", "2024-12-04 13:00:00"),
-    (5, 5, NULL, "2024-12-05 14:00:00", "2024-12-05 14:00:00"),
-    (6, 6, NULL, "2024-12-06 15:00:00", "2024-12-06 15:00:00"),
-    (7, 7, NULL, "2024-12-07 16:00:00", "2024-12-07 16:00:00"),
-    (8, 8, NULL, "2024-12-08 17:00:00", "2024-12-08 17:00:00");
-
--- Insert into ShoppingCart for Guest Users
-INSERT INTO ShoppingCart (cart_id, user_id, session_id, created_at, updated_at)
-VALUES
-    (9, NULL, "session_ABC123", "2024-12-09 18:00:00", "2024-12-09 18:00:00"),
-    (10, NULL, "session_DEF456", "2024-12-10 19:00:00", "2024-12-10 19:00:00"),
-    (11, NULL, "session_GHI789", "2024-12-11 20:00:00", "2024-12-11 20:00:00"),
-    (12, NULL, "session_JKL012", "2024-12-12 21:00:00", "2024-12-12 21:00:00");
-
--- Insert into ShoppingCartItems for Registered Users
-INSERT INTO ShoppingCartItems (cart_item_id, cart_id, variant_id, quantity, added_at)
-VALUES
-    (1, 1, 1, 2, "2024-12-01 10:05:00"),
-    (2, 1, 4, 1, "2024-12-01 10:10:00"),
-    (3, 2, 6, 3, "2024-12-02 11:05:00"),
-    (4, 3, 7, 1, "2024-12-03 12:15:00"),
-    (5, 4, 9, 2, "2024-12-04 13:20:00"),
-    (6, 5, 12, 1, "2024-12-05 14:25:00"),
-    (7, 6, 14, 4, "2024-12-06 15:30:00"),
-    (8, 7, 17, 1, "2024-12-07 16:35:00"),
-    (9, 8, 20, 2, "2024-12-08 17:40:00");
-
--- Insert into ShoppingCartItems for Guest Users
-INSERT INTO ShoppingCartItems (cart_item_id, cart_id, variant_id, quantity, added_at)
-VALUES
-    (10, 9, 2, 1, "2024-12-09 18:05:00"),
-    (11, 10, 5, 2, "2024-12-10 19:10:00"),
-    (12, 11, 10, 1, "2024-12-11 20:15:00"),
-    (13, 12, 15, 3, "2024-12-12 21:20:00");
-
-INSERT INTO Comments (comment_id, product_id, user_id, rating, content, approved, created_at)
-VALUES
-(1, 1, 1, 5, "Absolutely love the floral notes!", TRUE, "2024-11-02 10:30:00"),
-(2, 2, 2, 4, "Great balance and smooth taste.", TRUE, "2024-11-16 13:45:00"),
-(3, 3, 3, 3, "Too strong for my liking.", FALSE, "2024-12-02 09:15:00"),
-(4, 4, 4, 5, "Bright and fruity, perfect for mornings!", TRUE, "2024-12-03 11:00:00"),
-(5, 5, 5, 4, "Rich and complex flavors.", TRUE, "2024-11-21 16:20:00"),
-(6, 6, 6, 2, "Not as sweet as I expected.", FALSE, "2024-10-26 17:50:00"),
-(7, 7, 7, 5, "Delightful and aromatic.", TRUE, "2024-12-07 18:30:00"),
-(8, 8, 8, 4, "Good quality coffee.", TRUE, "2024-12-08 19:45:00");
-
-
-
-INSERT INTO Orders (order_id,user_id, total_price, status, delivery_option_id, created_at, updated_at)
-VALUES
--- Order 1 by Arya Hassibi
-(1, 1, 1350.00, 'processing', 1, '2025-01-10 10:15:00', '2025-01-10 10:15:00'),
-(2, 1, 2250.00, 'in-transit', 2, '2025-01-11 14:30:00', '2025-01-12 09:45:00'),
-(3, 1, 1200.00, 'delivered', 3, '2024-11-09 08:20:00', '2025-01-11 16:50:00'),
-(4, 1, 950.00, 'canceled', 1, '2025-01-12 11:00:00', '2025-01-12 12:00:00'),
-(5, 1, 1275.00, 'delivered', 2, '2025-01-13 09:10:00', '2025-01-13 09:10:00');
-
-INSERT INTO OrderItems (order_id, variant_id, quantity, price_at_purchase)
-VALUES
--- OrderItems for Order 1
-(1, 1, 1, 500.00),   -- Variant 1: ETH-YIR-250
-(1, 5, 1, 850.00),   -- Variant 5: COL-SUP-500),
-
--- OrderItems for Order 2
-(2, 10, 1, 1100.00), -- Variant 10: SUM-MAN-500
-(2, 22, 1, 1150.00), -- Variant 22: TAN-PEA-500),
-
--- OrderItems for Order 3
-(3, 19, 1, 1200.00), -- Variant 34: YEM-MOH-500
-
--- OrderItems for Order 4
-(4, 2, 1, 950.00),    -- Variant 2: ETH-YIR-500
-
--- OrderItems for Order 5
-(5, 12, 1, 575.00),   -- Variant 21: TAN-PEA-250
-(5, 28, 1, 700.00);   -- Variant 28: PAN-GEI-250
-
-
--- The Following data insertions are commented out to avoid conflicts since they are dynamicly generated in the application.
--- INSERT INTO Payments (payment_id, order_id, user_id, payment_date, amount, card_holder_name, card_number, card_expiration, cvv)
--- VALUES
--- (1, 1, 1, "2024-11-01 10:05:00", 1500.00, "Arya Hassibi", AES_ENCRYPT("4111111111111111", "encryption_key"), "2026-05-01", AES_ENCRYPT("123", "encryption_key")),
--- (2, 2, 1, "2024-11-15 12:35:00", 800.00, "Arya Hassibi", AES_ENCRYPT("4111111111111111", "encryption_key"), "2026-05-01", AES_ENCRYPT("123", "encryption_key")),
--- (3, 3, 1, "2024-12-01 09:50:00", 300.00, "Arya Hassibi", AES_ENCRYPT("4111111111111111", "encryption_key"), "2026-05-01", AES_ENCRYPT("123", "encryption_key")),
--- (4, 4, 2, "2024-12-05 11:25:00", 500.00, "Beste Bayhan", AES_ENCRYPT("4222222222222222", "encryption_key"), "2025-06-01", AES_ENCRYPT("456", "encryption_key")),
--- (5, 5, 3, "2024-12-07 08:20:00", 2500.00, "Mustafa Topcu", AES_ENCRYPT("4333333333333333", "encryption_key"), "2027-07-01", AES_ENCRYPT("789", "encryption_key")),
--- (6, 6, 5, "2024-11-20 14:55:00", 750.00, "Eid Alhamali", AES_ENCRYPT("4444444444444444", "encryption_key"), "2025-08-01", AES_ENCRYPT("012", "encryption_key")),
--- (7, 7, 6, "2024-10-25 16:35:00", 1200.00, "Ecem Akın", AES_ENCRYPT("4555555555555555", "encryption_key"), "2024-09-01", AES_ENCRYPT("345", "encryption_key")),
--- (8, 8, 6, "2024-12-02 13:45:00", 600.00, "Ecem Akın", AES_ENCRYPT("4555555555555555", "encryption_key"), "2024-09-01", AES_ENCRYPT("345", "encryption_key")),
--- (9, 9, 8, "2024-12-06 17:30:00", 900.00, "Cemal Yılmaz", AES_ENCRYPT("4666666666666666", "encryption_key"), "2026-10-01", AES_ENCRYPT("678", "encryption_key"));
-
--- INSERT INTO RefundRequests (refund_request_id, order_id, user_id, request_date, status, notes)
--- VALUES
--- (1, 2, 1, "2024-11-20 10:00:00", "approved", "Product arrived damaged."),
--- (2, 4, 2, "2024-12-10 12:00:00", "pending", "Wrong product delivered."),
--- (3, 7, 6, "2024-10-30 09:30:00", "rejected", "No reason provided.");
-
--- INSERT INTO ReturnItems (return_item_id, refund_request_id, product_id, quantity, price_at_purchase, reason)
--- VALUES
--- (1, 1, 3, 1, 600.00, "Damaged packaging."),
--- (2, 2, 6, 2, 520.00, "Incorrect variant received."),
--- (3, 3, 12, 1, 575.00, "Did not like the taste.");
-
--- INSERT INTO Invoices (invoice_id, order_id, user_id, invoice_pdf, created_at)
--- VALUES
--- (1, 1, 1, NULL, "2024-11-05 15:05:00"),
--- (2, 2, 1, NULL, "2024-11-17 18:05:00"),
--- (3, 3, 1, NULL, "2024-12-06 14:35:00"),
--- (4, 4, 2, NULL, "2024-12-05 11:25:00"),
--- (5, 5, 3, NULL, "2024-12-07 08:25:00"),
--- (6, 6, 5, NULL, "2024-11-23 16:05:00"),
--- (7, 7, 6, NULL, "2024-10-30 10:05:00"),
--- (8, 8, 6, NULL, "2024-12-02 13:45:00"),
--- (9, 9, 8, NULL, "2024-12-06 17:30:00");
 
 INSERT INTO Discounts (discount_id, discount_type, value, start_date, end_date, variant_id, active)
 VALUES
 (1, "percentage", 10.00, "2024-12-01", "2025-12-31", 13, TRUE),
 (2, "fixed", 50.00, "2024-11-15", "2025-11-30", 4, TRUE),
 (3, "percentage", 15.00, "2024-10-01", "2025-10-31", 9, FALSE),
-(4, "fixed", 100.00, "2024-12-05", "2025-12-20", 27, TRUE),
+(4, "fixed", 100.00, "2024-12-05", "2025-12-20", 17, TRUE),
 (5, "percentage", 5.00, "2024-12-10", "2025-12-25", 16, TRUE);
 
 INSERT INTO Wishlist (wishlist_id, user_id, created_at)
@@ -417,7 +344,7 @@ VALUES
 (3, 4, "2024-12-05 15:45:00"),
 (4, 5, "2024-12-02 18:20:00"),
 (5, 6, "2024-12-07 11:10:00"),
-(6, 8, "2024-12-04 13:50:00");
+(6, 7, "2024-12-04 13:50:00");
 
 INSERT INTO WishlistItems (wishlist_item_id, wishlist_id, variant_id, added_at)
 VALUES
@@ -431,8 +358,8 @@ VALUES
 
 -- User 4"s Wishlist
 (5, 3, 8, "2024-12-05 15:50:00"),
-(6, 3, 20, "2024-12-05 16:10:00"),
-(7, 3, 25, "2024-12-05 16:20:00"),
+(6, 3, 15, "2024-12-05 16:10:00"),
+(7, 3, 17, "2024-12-05 16:20:00"),
 
 -- User 5"s Wishlist
 (8, 4, 2, "2024-12-02 18:25:00"),
@@ -441,7 +368,7 @@ VALUES
 (9, 5, 11, "2024-12-07 11:15:00"),
 (10, 5, 13, "2024-12-07 11:25:00"),
 
--- User 8"s Wishlist
+-- User 7"s Wishlist
 (11, 6, 18, "2024-12-04 13:55:00"),
-(12, 6, 28, "2024-12-04 14:05:00"),
-(13, 6, 30, "2024-12-04 14:20:00");
+(12, 6, 7, "2024-12-04 14:05:00"),
+(13, 6, 6, "2024-12-04 14:20:00");
