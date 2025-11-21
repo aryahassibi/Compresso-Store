@@ -121,7 +121,7 @@ const AdminDeliveryPage = () => {
                     className="go-back-button"
                     onClick={() => navigate("/admin/product_management")}
                 >
-                    Go Back
+                    ◀︎ Go Back
                 </button>
                 {["processing", "in-transit", "delivered", "canceled"].map((status) => (
                     <div
