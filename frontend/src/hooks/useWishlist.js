@@ -97,15 +97,22 @@ const removeFromWishlist = async (variantId) => {
 export const toggleWishlist = async (
     variantId,
     isWishlist,
-    setWishlistState
+    setWishlistState,
+    notify
 ) => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+        notify && notify("Please log in to manage your wishlist.", "error");
+        return;
+    }
+
     try {
         if (isWishlist) {
             await removeFromWishlist(variantId); // Remove from wishlist
-            alert("Removed from wishlist");
+            notify && notify("Removed from wishlist", "success");
         } else {
             await addToWishlist(variantId); // Add to wishlist
-            alert("Added to wishlist");
+            notify && notify("Added to wishlist", "success");
         }
         setWishlistState((prev) => !prev); // Toggle wishlist state
     } catch (error) {
@@ -113,11 +120,13 @@ export const toggleWishlist = async (
             `Error ${isWishlist ? "removing from" : "adding to"} wishlist:`,
             error
         );
-        alert(
-            `Failed to ${
-                isWishlist ? "remove from" : "add to"
-            } wishlist. Please try again.`
-        );
+        notify &&
+            notify(
+                `Failed to ${
+                    isWishlist ? "remove from" : "add to"
+                } wishlist. Please try again.`,
+                "error"
+            );
     }
 };
 
@@ -125,7 +134,7 @@ export const getWishlistStatus = async (variantId) => {
     try {
         const token = localStorage.getItem("token");
         if (!token) {
-            throw new Error("User is not authenticated.");
+            return false;
         }
 
         const response = await axios.get(
