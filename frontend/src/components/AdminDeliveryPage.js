@@ -22,8 +22,8 @@ const AdminDeliveryPage = () => {
             }
 
             try {
-                const response = await axios.get("http://localhost:5001/order/getorders", {
-                    headers: { Authorization: `Bearer ${token}` },
+                const response = await axios.get("http://localhost:5001/order/getallorders", {
+                    headers: token ? { Authorization: `Bearer ${token}` } : {},
                 });
 
                 setOrders(response.data.orders);
