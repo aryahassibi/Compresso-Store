@@ -1,6 +1,6 @@
 import "./BestSellingProducts.css";
 import { useNavigate } from "react-router-dom";
-import Toast from "./Toast";
+import Toast from "../Toast";
 import { useState} from 'react';
 import axios from 'axios';  
 
