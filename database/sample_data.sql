@@ -27,15 +27,15 @@ VALUES
 
 INSERT INTO Products (product_id, name, origin, roast_level, bean_type, grind_type, flavor_profile, processing_method, caffeine_content, category_id, description, warranty_status, distributor_info)
 VALUES
-(1, "Product C | Sunrise Over the Serengeti", "Tanzania", "Light", "Arabica", "Whole Bean", "Citrus and floral whispers", "Washed", "High", 1, 
+(1, "Sunrise Over the Serengeti", "Tanzania", "Light", "Arabica", "Whole Bean", "Citrus and floral whispers", "Washed", "High", 1, 
     "Like the first light kissing the vast plains of the Serengeti, this coffee feels alive. Notes of citrus and delicate florals bloom with every sip, reminding you of new beginnings and untamed beauty.", 
     FALSE, "Tanzanian Treasures Ltd."),
 
-(2, "Product B | Bolivian Echoes", "Bolivia", "Medium", "Blend", "Ground", "Nutty with a whisper of cocoa", "Honey-processed", "Half-Caf", 2, 
+(2, " Bolivian Echoes", "Bolivia", "Medium", "Blend", "Ground", "Nutty with a whisper of cocoa", "Honey-processed", "Half-Caf", 2, 
     "A quiet symphony that lingers in the soul like the echoes of Andean pan flutes. Its nutty richness and subtle cocoa notes evoke mountain trails and misty mornings.", 
     TRUE, "Bolivia Bean Collective"),
 
-(3, "Product A | The Midnight Drifter", "Ethiopia", "Espresso", "Arabica", "Ground", "Dark chocolate and blackberry", "Natural", "High", 3, 
+(3, "The Midnight Drifter", "Ethiopia", "Espresso", "Arabica", "Ground", "Dark chocolate and blackberry", "Natural", "High", 3, 
     "A bold companion for sleepless nights and untold stories. Its intense dark chocolate depth and blackberry intrigue feel like wandering under a canopy of stars.", 
     FALSE, "Ethiopian Coffee Routes"),
 
@@ -65,48 +65,48 @@ VALUES
 
 (10, "Panama Geisha Dream", "Panama", "Light", "Arabica", "Whole Bean", "Jasmine and tropical fruit", "Washed", "High", 3, 
     "An ethereal experience. Jasmine notes entwined with tropical fruit sweetness make this a coffee to savor slowly, like a daydream slipping into reality.", 
-    TRUE, "Panama Coffee Treasures"),
+    TRUE, "Panama Coffee Treasures");
 
-(11, "Mexican Firewood", "Mexico", "French", "Blend", "Ground", "Smoke and spiced chocolate", "Other", "Half-Caf", 1, 
-    "A robust brew that feels like sitting by a crackling fire in the Mexican highlands. Smoke and spiced chocolate warmth make this a grounding companion.", 
-    FALSE, "Mexican Coffee Collective"),
+-- (11, "Mexican Firewood", "Mexico", "French", "Blend", "Ground", "Smoke and spiced chocolate", "Other", "Half-Caf", 1, 
+--     "A robust brew that feels like sitting by a crackling fire in the Mexican highlands. Smoke and spiced chocolate warmth make this a grounding companion.", 
+--     FALSE, "Mexican Coffee Collective"),
 
-(12, "Peruvian Secret Garden", "Peru", "Medium", "Arabica", "Whole Bean", "Floral and honey", "Washed", "Decaf", 2, 
-    "Soft as the petals of an unseen bloom, this coffee whispers of a hidden garden. Its floral and honey notes unfold gently, like secrets in the air.", 
-    TRUE, "Peruvian Heritage Beans"),
+-- (12, "Peruvian Secret Garden", "Peru", "Medium", "Arabica", "Whole Bean", "Floral and honey", "Washed", "Decaf", 2, 
+--     "Soft as the petals of an unseen bloom, this coffee whispers of a hidden garden. Its floral and honey notes unfold gently, like secrets in the air.", 
+--     TRUE, "Peruvian Heritage Beans"),
 
-(13, "Yemen Desert Mirage", "Yemen", "Dark", "Blend", "Whole Bean", "Chocolate and fig", "Natural", "High", 5, 
-    "Like a rare vision in the shifting sands, this coffee is a treasure of chocolate richness and fig sweetness. A mirage worth chasing.", 
-    FALSE, "Yemeni Coffee Routes"),
+-- (13, "Yemen Desert Mirage", "Yemen", "Dark", "Blend", "Whole Bean", "Chocolate and fig", "Natural", "High", 5, 
+--     "Like a rare vision in the shifting sands, this coffee is a treasure of chocolate richness and fig sweetness. A mirage worth chasing.", 
+--     FALSE, "Yemeni Coffee Routes"),
 
-(14, "Vietnamese Bold Horizon", "Vietnam", "French", "Robusta", "Ground", "Bold with caramel undertones", "Washed", "High", 1, 
-    "A daring blend that pushes boundaries. Its boldness and caramel undertones embody the resilience and spirit of Vietnam.", 
-    FALSE, "Vietnam Coffee Collective"),
+-- (14, "Vietnamese Bold Horizon", "Vietnam", "French", "Robusta", "Ground", "Bold with caramel undertones", "Washed", "High", 1, 
+--     "A daring blend that pushes boundaries. Its boldness and caramel undertones embody the resilience and spirit of Vietnam.", 
+--     FALSE, "Vietnam Coffee Collective"),
 
-(15, "Kenyan Red Sunset", "Kenya", "Dark", "Arabica", "Ground", "Berry and wine", "Natural", "High", 5, 
-    "Rich as a Kenyan sunset fading to red, this coffee's berry and wine notes evoke a boldness that commands attention.", 
-    FALSE, "Kenyan Bean Collective"),
+-- (15, "Kenyan Red Sunset", "Kenya", "Dark", "Arabica", "Ground", "Berry and wine", "Natural", "High", 5, 
+--     "Rich as a Kenyan sunset fading to red, this coffee's berry and wine notes evoke a boldness that commands attention.", 
+--     FALSE, "Kenyan Bean Collective"),
 
-(16, "Honduran Stargazer", "Honduras", "Medium", "Arabica", "Whole Bean", 
-    "Sweet and herbal", "Washed", "Decaf", 4, 
-    "A coffee for quiet nights under infinite skies. Sweetness and herbal notes blend in harmony, like constellations above.", 
-    TRUE, "Honduran Coffee Routes"),
+-- (16, "Honduran Stargazer", "Honduras", "Medium", "Arabica", "Whole Bean", 
+--     "Sweet and herbal", "Washed", "Decaf", 4, 
+--     "A coffee for quiet nights under infinite skies. Sweetness and herbal notes blend in harmony, like constellations above.", 
+--     TRUE, "Honduran Coffee Routes"),
 
-(17, "Laos Whispering Rain", "Laos", "Medium", "Blend", "Whole Bean", "Nutty with soft spice", "Natural", "Half-Caf", 4, 
-    "Gentle as rain on lush green fields, this coffee offers nutty warmth with a touch of spice. It feels like a quiet conversation with nature.", 
-    TRUE, "Laos Coffee Collective"),
+-- (17, "Laos Whispering Rain", "Laos", "Medium", "Blend", "Whole Bean", "Nutty with soft spice", "Natural", "Half-Caf", 4, 
+--     "Gentle as rain on lush green fields, this coffee offers nutty warmth with a touch of spice. It feels like a quiet conversation with nature.", 
+--     TRUE, "Laos Coffee Collective"),
 
-(18, "Turkish Caravan Tale", "Turkey", "French", "Blend", "Ground", "Cardamom and dark chocolate", "Other", "High", 2, 
-    "Rich, spiced, and complex as the tales of caravans crossing ancient lands. Cardamom and dark chocolate transport you to a world of wonder.", 
-    FALSE, "Turkish Coffee Routes"),
+-- (18, "Turkish Caravan Tale", "Turkey", "French", "Blend", "Ground", "Cardamom and dark chocolate", "Other", "High", 2, 
+--     "Rich, spiced, and complex as the tales of caravans crossing ancient lands. Cardamom and dark chocolate transport you to a world of wonder.", 
+--     FALSE, "Turkish Coffee Routes"),
 
-(19, "Colombian Daybreak", "Colombia", "Light", "Arabica", "Ground", "Bright and citrusy", "Washed", "High", 2, 
-    "Fresh as dawn breaking over Colombian hills, this coffee's brightness awakens the senses and inspires hope for the day ahead.", 
-    TRUE, "Colombian Coffee Legends"),
+-- (19, "Colombian Daybreak", "Colombia", "Light", "Arabica", "Ground", "Bright and citrusy", "Washed", "High", 2, 
+--     "Fresh as dawn breaking over Colombian hills, this coffee's brightness awakens the senses and inspires hope for the day ahead.", 
+--     TRUE, "Colombian Coffee Legends"),
 
-(20, "Ecuadorian High Spirits", "Ecuador", "Medium", "Blend", "Whole Bean", "Cocoa and citrus", "Natural", "High", 4, 
-    "Uplifting and bright, this coffee's cocoa depth and citrus zing feel like a celebration in a cup. A tribute to life's vibrant highs.", 
-    TRUE, "Ecuadorian Coffee Routes");
+-- (20, "Ecuadorian High Spirits", "Ecuador", "Medium", "Blend", "Whole Bean", "Cocoa and citrus", "Natural", "High", 4, 
+--     "Uplifting and bright, this coffee's cocoa depth and citrus zing feel like a celebration in a cup. A tribute to life's vibrant highs.", 
+--     TRUE, "Ecuadorian Coffee Routes");
 
 INSERT INTO Product_Variant (variant_id, product_id, weight_grams, price, stock, sku)
 VALUES
@@ -147,44 +147,44 @@ VALUES
 
 -- Product 10 Variants
 (18, 10, 250, 510.00, 0, "HON-MAR-250"),        -- Out of stock
-(19, 10, 500, 1000.00, 1, "HON-MAR-500"),       -- Only 1 left in stock
+(19, 10, 500, 1000.00, 1, "HON-MAR-500");       -- Only 1 left in stock
 
 -- Product 11 Variants
-(20, 11, 250, 495.00, 130, "PER-SIG-250"),
+-- (20, 11, 250, 495.00, 130, "PER-SIG-250"),
 
--- Product 12 Variants
-(21, 12, 250, 575.00, 90, "TAN-PEA-250"),
-(22, 12, 500, 1150.00, 1, "TAN-PEA-500"),       -- Only 1 left in stock
-(23, 12, 1000, 2200.00, 20, "TAN-PEA-1000"),
+-- -- Product 12 Variants
+-- (21, 12, 250, 575.00, 90, "TAN-PEA-250"),
+-- (22, 12, 500, 1150.00, 1, "TAN-PEA-500"),       -- Only 1 left in stock
+-- (23, 12, 1000, 2200.00, 20, "TAN-PEA-1000"),
 
--- Product 13 Variants
-(24, 13, 250, 610.00, 80, "PNG-SIG-250"),
+-- -- Product 13 Variants
+-- (24, 13, 250, 610.00, 80, "PNG-SIG-250"),
 
--- Product 14 Variants
-(25, 14, 250, 540.00, 100, "RWA-BUR-250"),
-(26, 14, 500, 1080.00, 50, "RWA-BUR-500"),
+-- -- Product 14 Variants
+-- (25, 14, 250, 540.00, 100, "RWA-BUR-250"),
+-- (26, 14, 500, 1080.00, 50, "RWA-BUR-500"),
 
--- Product 15 Variants
-(27, 15, 250, 505.00, 120, "ELS-PAC-250"),
+-- -- Product 15 Variants
+-- (27, 15, 250, 505.00, 120, "ELS-PAC-250"),
 
--- Product 16 Variants
-(28, 16, 250, 700.00, 60, "PAN-GEI-250"),
-(29, 16, 500, 1350.00, 0, "PAN-GEI-500"),       -- Out of stock
-(30, 16, 1000, 2600.00, 15, "PAN-GEI-1000"),
+-- -- Product 16 Variants
+-- (28, 16, 250, 700.00, 60, "PAN-GEI-250"),
+-- (29, 16, 500, 1350.00, 0, "PAN-GEI-500"),       -- Out of stock
+-- (30, 16, 1000, 2600.00, 15, "PAN-GEI-1000"),
 
--- Product 17 Variants
-(31, 17, 250, 380.00, 200, "VIE-ROB-250"),
+-- -- Product 17 Variants
+-- (31, 17, 250, 380.00, 200, "VIE-ROB-250"),
 
--- Product 18 Variants
-(32, 18, 250, 550.00, 100, "IND-MON-250"),
+-- -- Product 18 Variants
+-- (32, 18, 250, 550.00, 100, "IND-MON-250"),
 
--- Product 19 Variants
-(33, 19, 250, 620.00, 70, "YEM-MOH-250"),
-(34, 19, 500, 1200.00, 1, "YEM-MOH-500"),       -- Only 1 left in stock
+-- -- Product 19 Variants
+-- (33, 19, 250, 620.00, 70, "YEM-MOH-250"),
+-- (34, 19, 500, 1200.00, 1, "YEM-MOH-500"),       -- Only 1 left in stock
 
--- Product 20 Variants
-(35, 20, 250, 500.00, 0, "LAO-BOL-250"),
-(36, 20, 500, 980.00, 40, "LAO-BOL-500");       -- Out of stock
+-- -- Product 20 Variants
+-- (35, 20, 250, 500.00, 0, "LAO-BOL-250"),
+-- (36, 20, 500, 980.00, 40, "LAO-BOL-500");       -- Out of stock
 
 INSERT INTO Product_Images (image_id, variant_id, image_url, alt_text)
 VALUES
@@ -216,34 +216,34 @@ VALUES
 (17, 17, "/assets/images/products/product9.png", "Santiago at Dusk 250g"),
 
 (18, 18, "/assets/images/products/product10.png", "Panama Geisha Dream 250g"),
-(19, 19, "/assets/images/products/product10.png", "Panama Geisha Dream 500g"),
+(19, 19, "/assets/images/products/product10.png", "Panama Geisha Dream 500g");
 
-(20, 20, "/assets/images/products/product11.png", "Mexican Firewood 250g"),
+-- (20, 20, "/assets/images/products/product11.png", "Mexican Firewood 250g"),
 
-(21, 21, "/assets/images/products/product12.png", "Peruvian Secret Garden 250g"),
-(22, 22, "/assets/images/products/product12.png", "Peruvian Secret Garden 500g"),
-(23, 23, "/assets/images/products/product12.png", "Peruvian Secret Garden 1000g"),
+-- (21, 21, "/assets/images/products/product12.png", "Peruvian Secret Garden 250g"),
+-- (22, 22, "/assets/images/products/product12.png", "Peruvian Secret Garden 500g"),
+-- (23, 23, "/assets/images/products/product12.png", "Peruvian Secret Garden 1000g"),
 
-(24, 24, "/assets/images/products/product13.png", "Yemen Desert Mirage 250g"),
+-- (24, 24, "/assets/images/products/product13.png", "Yemen Desert Mirage 250g"),
 
-(25, 25, "/assets/images/products/product14.png", "Vietnamese Bold Horizon 250g"),
-(26, 26, "/assets/images/products/product14.png", "Vietnamese Bold Horizon 500g"),
+-- (25, 25, "/assets/images/products/product14.png", "Vietnamese Bold Horizon 250g"),
+-- (26, 26, "/assets/images/products/product14.png", "Vietnamese Bold Horizon 500g"),
 
-(27, 27, "/assets/images/products/product15.png", "Kenyan Red Sunset 250g"),
+-- (27, 27, "/assets/images/products/product15.png", "Kenyan Red Sunset 250g"),
 
-(28, 28, "/assets/images/products/product16.png", "Honduran Stargazer 250g"),
-(29, 29, "/assets/images/products/product16.png", "Honduran Stargazer 500g"),
-(30, 30, "/assets/images/products/product16.png", "Honduran Stargazer 1000g"),
+-- (28, 28, "/assets/images/products/product16.png", "Honduran Stargazer 250g"),
+-- (29, 29, "/assets/images/products/product16.png", "Honduran Stargazer 500g"),
+-- (30, 30, "/assets/images/products/product16.png", "Honduran Stargazer 1000g"),
 
-(31, 31, "/assets/images/products/product17.png", "Laos Whispering Rain 250g"),
+-- (31, 31, "/assets/images/products/product17.png", "Laos Whispering Rain 250g"),
 
-(32, 32, "/assets/images/products/product18.png", "Turkish Caravan Tale 250g"),
+-- (32, 32, "/assets/images/products/product18.png", "Turkish Caravan Tale 250g"),
 
-(33, 33, "/assets/images/products/product19.png", "Colombian Daybreak 250g"),
-(34, 34, "/assets/images/products/product19.png", "Colombian Daybreak 500g"),
+-- (33, 33, "/assets/images/products/product19.png", "Colombian Daybreak 250g"),
+-- (34, 34, "/assets/images/products/product19.png", "Colombian Daybreak 500g"),
 
-(35, 35, "/assets/images/products/product20.png", "Ecuadorian High Spirits 250g"),
-(36, 36, "/assets/images/products/product20.png", "Ecuadorian High Spirits 500g");
+-- (35, 35, "/assets/images/products/product20.png", "Ecuadorian High Spirits 250g"),
+-- (36, 36, "/assets/images/products/product20.png", "Ecuadorian High Spirits 500g");
 
 
 
@@ -270,7 +270,6 @@ LEFT JOIN (
 SET p.average_rating = COALESCE(ratings.avg_rating, 0);
 
 
-
 INSERT INTO Orders (order_id, user_id, total_price, status, delivery_option_id, created_at, updated_at)
 VALUES
 -- Order 1 by Arya Hassibi
@@ -288,17 +287,17 @@ VALUES
 
 -- OrderItems for Order 2
 (2, 10, 1, 1100.00), -- Variant 10: SUM-MAN-500
-(2, 22, 1, 1150.00), -- Variant 22: TAN-PEA-500),
+(2, 4, 1, 1150.00), -- Variant 22: TAN-PEA-500),
 
 -- OrderItems for Order 3
-(3, 19, 1, 1200.00), -- Variant 34: YEM-MOH-500
+(3, 2, 1, 1200.00), -- Variant 34: YEM-MOH-500
 
 -- OrderItems for Order 4
 (4, 2, 1, 950.00),    -- Variant 2: ETH-YIR-500
 
 -- OrderItems for Order 5
 (5, 12, 1, 575.00),   -- Variant 21: TAN-PEA-250
-(5, 28, 1, 700.00);   -- Variant 28: PAN-GEI-250
+(5, 18, 1, 700.00);   -- Variant 28: PAN-GEI-250
 
 -- Addresses (inserted after Orders to satisfy FK constraints)
 INSERT INTO Address (address_name, user_id, order_id, address_line, city, phone_number, postal_code, country) 
@@ -324,7 +323,7 @@ VALUES
 (1, "percentage", 10.00, "2024-12-01", "2025-12-31", 13, TRUE),
 (2, "fixed", 50.00, "2024-11-15", "2025-11-30", 4, TRUE),
 (3, "percentage", 15.00, "2024-10-01", "2025-10-31", 9, FALSE),
-(4, "fixed", 100.00, "2024-12-05", "2025-12-20", 27, TRUE),
+(4, "fixed", 100.00, "2024-12-05", "2025-12-20", 17, TRUE),
 (5, "percentage", 5.00, "2024-12-10", "2025-12-25", 16, TRUE);
 
 INSERT INTO Wishlist (wishlist_id, user_id, created_at)
@@ -348,8 +347,8 @@ VALUES
 
 -- User 4"s Wishlist
 (5, 3, 8, "2024-12-05 15:50:00"),
-(6, 3, 20, "2024-12-05 16:10:00"),
-(7, 3, 25, "2024-12-05 16:20:00"),
+(6, 3, 15, "2024-12-05 16:10:00"),
+(7, 3, 17, "2024-12-05 16:20:00"),
 
 -- User 5"s Wishlist
 (8, 4, 2, "2024-12-02 18:25:00"),
@@ -360,5 +359,5 @@ VALUES
 
 -- User 7"s Wishlist
 (11, 6, 18, "2024-12-04 13:55:00"),
-(12, 6, 28, "2024-12-04 14:05:00"),
-(13, 6, 30, "2024-12-04 14:20:00");
+(12, 6, 7, "2024-12-04 14:05:00"),
+(13, 6, 6, "2024-12-04 14:20:00");
