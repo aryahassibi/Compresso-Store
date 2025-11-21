@@ -245,6 +245,17 @@ VALUES
 -- (35, 35, "/assets/images/products/product20.png", "Ecuadorian High Spirits 250g"),
 -- (36, 36, "/assets/images/products/product20.png", "Ecuadorian High Spirits 500g");
 
+-- Insert into ShoppingCart for Registered Users
+INSERT INTO ShoppingCart (cart_id, user_id, session_id, created_at, updated_at)
+VALUES
+    (1, 1, NULL, "2024-12-01 10:00:00", "2024-12-01 10:00:00"),
+    (2, 2, NULL, "2024-12-02 11:00:00", "2024-12-02 11:00:00"),
+    (3, 3, NULL, "2024-12-03 12:00:00", "2024-12-03 12:00:00"),
+    (4, 4, NULL, "2024-12-04 13:00:00", "2024-12-04 13:00:00"),
+    (5, 5, NULL, "2024-12-05 14:00:00", "2024-12-05 14:00:00"),
+    (6, 6, NULL, "2024-12-06 15:00:00", "2024-12-06 15:00:00"),
+    (7, 7, NULL, "2024-12-07 16:00:00", "2024-12-07 16:00:00");
+
 
 
 INSERT INTO Comments (comment_id, product_id, user_id, rating, content, approved, created_at)
