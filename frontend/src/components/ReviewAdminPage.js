@@ -69,7 +69,7 @@ const ReviewAdminPage = () => {
                 className="go-back-button-review"
                 onClick={() => navigate("/admin/product_management")}
             >
-                Go Back
+                ◀︎ Go Back
             </button>
             <h1 className="review-admin-title">Review Management</h1>
             <p className="review-admin-description">
