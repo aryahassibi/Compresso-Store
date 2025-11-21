@@ -14,7 +14,7 @@ const AdminDeliveryPage = () => {
 
     useEffect(() => {
         const fetchOrders = async () => {
-            const token = localStorage.getItem("token");
+            const token = sessionStorage.getItem("token");
 
             if (!token) {
                 navigate("/admin/login");
@@ -47,7 +47,7 @@ const AdminDeliveryPage = () => {
     const handleDownloadInvoice = async (orderId) => {
         setDownloadLoading(true);
         setDownloadError("");
-        // const token = localStorage.getItem("token");
+        // const token = sessionStorage.getItem("token");
 
         try {
             const response = await axios.get(`http://localhost:5001/order/getinvoice/${orderId}`, {
@@ -71,7 +71,7 @@ const AdminDeliveryPage = () => {
     };
 
     const handleStatusUpdate = async (orderId, newStatus) => {
-        const token = localStorage.getItem("token");
+        const token = sessionStorage.getItem("token");
         try {
             await axios.put(
                 `http://localhost:5001/order/updatestatus/${orderId}`,
@@ -260,4 +260,3 @@ const AdminDeliveryPage = () => {
 };
 
 export default AdminDeliveryPage;
-
