@@ -10,9 +10,15 @@ const ReviewAdminPage = () => {
     useEffect(() => {
         const fetchPendingReviews = async () => {
             try {
+                const token = sessionStorage.getItem("token");
+                if (!token) {
+                    navigate("/admin/login");
+                    return;
+                }
+
                 const response = await axios.get("http://localhost:5001/api/reviews/pending", {
                     headers: {
-                        Authorization: `Bearer ${localStorage.getItem("token")}`,
+                        Authorization: `Bearer ${token}`,
                     },
                 });
                 setPendingReviews(response.data.reviews);
@@ -23,13 +29,14 @@ const ReviewAdminPage = () => {
         };
 
         fetchPendingReviews();
-    }, []);
+    }, [navigate]);
 
     const handleApprove = async (comment_id) => {
         try {
+            const token = sessionStorage.getItem("token");
             await axios.put(`http://localhost:5001/api/reviews/approve/${comment_id}`, {}, {
                 headers: {
-                    Authorization: `Bearer ${localStorage.getItem("token")}`,
+                    Authorization: `Bearer ${token}`,
                 },
             });
             setPendingReviews((prev) => prev.filter((review) => review.comment_id !== comment_id));
@@ -42,9 +49,10 @@ const ReviewAdminPage = () => {
 
     const handleReject = async (comment_id) => {
         try {
+            const token = sessionStorage.getItem("token");
             await axios.delete(`http://localhost:5001/api/reviews/reject/${comment_id}`, {
                 headers: {
-                    Authorization: `Bearer ${localStorage.getItem("token")}`,
+                    Authorization: `Bearer ${token}`,
                 },
             });
             setPendingReviews((prev) => prev.filter((review) => review.comment_id !== comment_id));
