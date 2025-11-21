@@ -152,10 +152,11 @@ const Navbar = () => {
               )}
             </div>
           </div>
-
-          <Link to="/cart">
-            <img src={shopIcon} alt="Shop Icon" className="shop-icon" />
-          </Link>
+          <div className="user-icon-container">
+            <Link to="/cart">
+              <img src={shopIcon} alt="Shop Icon" className="shop-icon" />
+            </Link>
+          </div>
         </div>
       </nav>
       <ProductsDropdownMenu open={isProductsOpen} setOpen={setIsProductsOpen}/>

@@ -17,6 +17,7 @@
   /* Neutral Colors */
   --neutral-black: #202124;    /* Near Black */
   --neutral-dark-gray: #292a2b; /* Dark Gray */
+  --neutral-gray: #b4b4b4; /* Light Gray */
   --neutral-light-gray: #dadce0; /* Light Gray */
   --neutral-white: #ffffff;     /* White */
 
@@ -74,8 +75,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 .main-content {
-  padding-top: 79px; 
-  /*Match navbar height */
+  padding-top: 72px;                    /* <<<< should match  navbar height */
   background-color: var(--background);
   margin: 0;
 }

@@ -72,15 +72,13 @@
 .navbar-container .navbar-right {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
 }
 
 /* Search Bar */
 .navbar-container .search-bar {
   display: flex;
   align-items: center;
-  border: 1px solid var(--neutral-light-gray);
-  border-radius: 50px; /* Rounded corners for the search bar */
-  background-color: rgba(255, 255, 255, 0.6);
   overflow: hidden;
   padding: 5px 10px;
 }
@@ -90,7 +88,7 @@
   border: none;
   outline: none;
   font-size: var(--font-size-base);
-  padding: 8px 12px;
+  padding: 4px 4px;
   background: transparent;
 }
 
@@ -105,7 +103,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 10px;
+  padding: 0 4px;
 }
 
 .navbar-container .search-icon {
@@ -113,24 +111,43 @@
   height: 20px;
 }
 
-/* Icons */
-.navbar-container .shop-icon,
-.navbar-container .user-icon {
-  width: 30px;
-  height: auto;
-  cursor: pointer;
-  margin-left: 10px;
-  transition: transform 0.3s ease;
+
+.navbar-container .shop-icon{
+  padding-top:4px;
+  width:22px
 }
 
-.navbar-container .shop-icon:hover,
-.navbar-container .user-icon:hover {
+.navbar-container .shop-icon-container:hover,
+.navbar-container .user-icon-container:hover {
   transform: scale(1.1);
 }
 
 /* User Icon Dropdown */
 .navbar-container .user-icon-container {
   position: relative;
+}
+
+.navbar-container .user-icon-container,  
+.navbar-container .cart-icon-container  {
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
+}
+
+.navbar-container .search-bar,
+.navbar-container .user-icon-container,  
+.navbar-container .cart-icon-container {
+  border: 1px solid var(--neutral-light-gray);
+  border-radius: 20px; 
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .navbar-container .user-icon-container:hover .user-dropdown {
@@ -258,11 +275,6 @@
   }
 
 
-  .navbar-container .shop-icon,
-  .navbar-container .user-icon {
-    margin-right: 0;
-    margin-left: 10px;
-  }
 
   .navbar-container .navbar-right {
     margin-top: 10px;
