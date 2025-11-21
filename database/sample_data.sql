@@ -9,25 +9,7 @@ VALUES
 (4, "Orhun Ege", "Ozpay", "orhun@user.com", "+905304567890", "45678901234", SHA2("password", 256)),
 (5, "Eid", "Alhamali", "eid@user.com", "+905305678901", "56789012345", SHA2("password", 256)),
 (6, "Ecem", "Akın", "ecem@user.com", "+905306789012", "67890123456", SHA2("password", 256)),
-(9, "Test", "User", "test@user.com", "+905309012345", "90123456789", SHA2("password", 256));
-
--- Note: Passwords are all "password"
-INSERT INTO Managers (manager_id, first_name, last_name, email, password_hash, role)
-VALUES
-(1, "Arya", "Hassibi", "arya@manager.com", SHA2("admin12345", 256), "sales_manager"),
-(2, "Beste", "Bayhan", "beste@manager.com", SHA2("admin12345", 256), "product_manager"),
-(3, "Mustafa", "Topcu", "mustafa@manager.com", SHA2("admin12345", 256), "sales_manager"),
-(4, "Orhun", "Ege Ozpay", "orhun@manager.com", SHA2("admin12345", 256), "product_manager"),
-(5, "Eid", "Alhamali", "eid@manager.com", SHA2("admin12345", 256), "sales_manager"),
-(6, "Ecem", "Akın", "ecem@manager.com", SHA2("admin12345", 256), "product_manager"),
-(9, "Sales", "Manager", "sales@manager.com", SHA2("admin12345", 256), "sales_manager"),
-(10, "Product", "Manager", "product@manager.com", SHA2("admin12345", 256), "product_manager")
-ON DUPLICATE KEY UPDATE 
-    first_name = VALUES(first_name),
-    last_name = VALUES(last_name),
-    email = VALUES(email),
-    password_hash = VALUES(password_hash),
-    role = VALUES(role);
+(7, "Test", "User", "test@user.com", "+905309012345", "90123456789", SHA2("password", 256));
 
 INSERT INTO Categories (category_id, name, description)
 VALUES
@@ -264,63 +246,6 @@ VALUES
 (36, 36, "/assets/images/products/product20.png", "Ecuadorian High Spirits 500g");
 
 
-INSERT INTO Address (address_name, user_id, order_id, address_line, city, phone_number, postal_code, country) 
-VALUES 
-('Home Address 1', 1, NULL, '1234 Elm St', 'Istanbul', '555-1234', '34000', 'Turkey'),
-('Work Address 1', 1, NULL, '4567 Oak St', 'Ankara', '555-5678', '06000', 'Turkey'),
-('Home Address 2', 2, NULL, '7890 Pine St', 'Izmir', '555-8765', '35000', 'Turkey'),
-('Work Address 2', 2, NULL, '2345 Maple St', 'Bursa', '555-4321', '16000', 'Turkey'),
-('Home Address 3', 3, NULL, '9876 Birch St', 'Antalya', '555-2345', '07000', 'Turkey'),
-('Work Address 3', 3, NULL, '3456 Cedar St', 'Konya', '555-6789', '42000', 'Turkey'),
-('Home Address 4', 4, NULL, '6789 Redwood St', 'Mersin', '555-1357', '33000', 'Turkey'),
-('Work Address 4', 4, NULL, '5432 Palm St', 'Adana', '555-2468', '01000', 'Turkey'),
-('Home Address 5', 5, NULL, '1122 Cherry St', 'Gaziantep', '555-3579', '27000', 'Turkey'),
-('Work Address 5', 5, NULL, '2233 Fir St', 'Kayseri', '555-4680', '38000', 'Turkey'),
-('Home Address 1', 1, 4, '1234 Elm St', 'Istanbul', '555-1234', '34000', 'Turkey'),
-('Home Address 1', 1, 3, '1234 Elm St', 'Istanbul', '555-1234', '34000', 'Turkey'),
-('Home Address 1', 1, 1, '1234 Elm St', 'Istanbul', '555-1234', '34000', 'Turkey'),
-('Home Address 1', 1, 2, '1234 Elm St', 'Istanbul', '555-1234', '34000', 'Turkey');
-
--- Insert into ShoppingCart for Registered Users
-INSERT INTO ShoppingCart (cart_id, user_id, session_id, created_at, updated_at)
-VALUES
-    (1, 1, NULL, "2024-12-01 10:00:00", "2024-12-01 10:00:00"),
-    (2, 2, NULL, "2024-12-02 11:00:00", "2024-12-02 11:00:00"),
-    (3, 3, NULL, "2024-12-03 12:00:00", "2024-12-03 12:00:00"),
-    (4, 4, NULL, "2024-12-04 13:00:00", "2024-12-04 13:00:00"),
-    (5, 5, NULL, "2024-12-05 14:00:00", "2024-12-05 14:00:00"),
-    (6, 6, NULL, "2024-12-06 15:00:00", "2024-12-06 15:00:00"),
-    (7, 7, NULL, "2024-12-07 16:00:00", "2024-12-07 16:00:00"),
-    (8, 8, NULL, "2024-12-08 17:00:00", "2024-12-08 17:00:00");
-
--- Insert into ShoppingCart for Guest Users
-INSERT INTO ShoppingCart (cart_id, user_id, session_id, created_at, updated_at)
-VALUES
-    (9, NULL, "session_ABC123", "2024-12-09 18:00:00", "2024-12-09 18:00:00"),
-    (10, NULL, "session_DEF456", "2024-12-10 19:00:00", "2024-12-10 19:00:00"),
-    (11, NULL, "session_GHI789", "2024-12-11 20:00:00", "2024-12-11 20:00:00"),
-    (12, NULL, "session_JKL012", "2024-12-12 21:00:00", "2024-12-12 21:00:00");
-
--- Insert into ShoppingCartItems for Registered Users
-INSERT INTO ShoppingCartItems (cart_item_id, cart_id, variant_id, quantity, added_at)
-VALUES
-    (1, 1, 1, 2, "2024-12-01 10:05:00"),
-    (2, 1, 4, 1, "2024-12-01 10:10:00"),
-    (3, 2, 6, 3, "2024-12-02 11:05:00"),
-    (4, 3, 7, 1, "2024-12-03 12:15:00"),
-    (5, 4, 9, 2, "2024-12-04 13:20:00"),
-    (6, 5, 12, 1, "2024-12-05 14:25:00"),
-    (7, 6, 14, 4, "2024-12-06 15:30:00"),
-    (8, 7, 17, 1, "2024-12-07 16:35:00"),
-    (9, 8, 20, 2, "2024-12-08 17:40:00");
-
--- Insert into ShoppingCartItems for Guest Users
-INSERT INTO ShoppingCartItems (cart_item_id, cart_id, variant_id, quantity, added_at)
-VALUES
-    (10, 9, 2, 1, "2024-12-09 18:05:00"),
-    (11, 10, 5, 2, "2024-12-10 19:10:00"),
-    (12, 11, 10, 1, "2024-12-11 20:15:00"),
-    (13, 12, 15, 3, "2024-12-12 21:20:00");
 
 INSERT INTO Comments (comment_id, product_id, user_id, rating, content, approved, created_at)
 VALUES
@@ -330,12 +255,23 @@ VALUES
 (4, 4, 4, 5, "Bright and fruity, perfect for mornings!", TRUE, "2024-12-03 11:00:00"),
 (5, 5, 5, 4, "Rich and complex flavors.", TRUE, "2024-11-21 16:20:00"),
 (6, 6, 6, 2, "Not as sweet as I expected.", FALSE, "2024-10-26 17:50:00"),
-(7, 7, 7, 5, "Delightful and aromatic.", TRUE, "2024-12-07 18:30:00"),
-(8, 8, 8, 4, "Good quality coffee.", TRUE, "2024-12-08 19:45:00");
+(7, 7, 3, 5, "Delightful and aromatic.", TRUE, "2024-12-07 18:30:00"),
+(8, 8, 4, 4, "Good quality coffee.", TRUE, "2024-12-08 19:45:00");
+
+
+-- Ensure product averages reflect the sample comments
+UPDATE Products p
+LEFT JOIN (
+    SELECT product_id, AVG(rating) AS avg_rating
+    FROM Comments
+    -- WHERE approved = TRUE
+    GROUP BY product_id
+) ratings ON p.product_id = ratings.product_id
+SET p.average_rating = COALESCE(ratings.avg_rating, 0);
 
 
 
-INSERT INTO Orders (order_id,user_id, total_price, status, delivery_option_id, created_at, updated_at)
+INSERT INTO Orders (order_id, user_id, total_price, status, delivery_option_id, created_at, updated_at)
 VALUES
 -- Order 1 by Arya Hassibi
 (1, 1, 1350.00, 'processing', 1, '2025-01-10 10:15:00', '2025-01-10 10:15:00'),
@@ -364,43 +300,24 @@ VALUES
 (5, 12, 1, 575.00),   -- Variant 21: TAN-PEA-250
 (5, 28, 1, 700.00);   -- Variant 28: PAN-GEI-250
 
+-- Addresses (inserted after Orders to satisfy FK constraints)
+INSERT INTO Address (address_name, user_id, order_id, address_line, city, phone_number, postal_code, country) 
+VALUES 
+('Home Address 1', 1, NULL, '1234 Elm St', 'Istanbul', '555-1234', '34000', 'Turkey'),
+('Work Address 1', 1, NULL, '4567 Oak St', 'Ankara', '555-5678', '06000', 'Turkey'),
+('Home Address 2', 2, NULL, '7890 Pine St', 'Izmir', '555-8765', '35000', 'Turkey'),
+('Work Address 2', 2, NULL, '2345 Maple St', 'Bursa', '555-4321', '16000', 'Turkey'),
+('Home Address 3', 3, NULL, '9876 Birch St', 'Antalya', '555-2345', '07000', 'Turkey'),
+('Work Address 3', 3, NULL, '3456 Cedar St', 'Konya', '555-6789', '42000', 'Turkey'),
+('Home Address 4', 4, NULL, '6789 Redwood St', 'Mersin', '555-1357', '33000', 'Turkey'),
+('Work Address 4', 4, NULL, '5432 Palm St', 'Adana', '555-2468', '01000', 'Turkey'),
+('Home Address 5', 5, NULL, '1122 Cherry St', 'Gaziantep', '555-3579', '27000', 'Turkey'),
+('Work Address 5', 5, NULL, '2233 Fir St', 'Kayseri', '555-4680', '38000', 'Turkey'),
+('Home Address 1', 1, 4, '1234 Elm St', 'Istanbul', '555-1234', '34000', 'Turkey'),
+('Home Address 1', 1, 3, '1234 Elm St', 'Istanbul', '555-1234', '34000', 'Turkey'),
+('Home Address 1', 1, 1, '1234 Elm St', 'Istanbul', '555-1234', '34000', 'Turkey'),
+('Home Address 1', 1, 2, '1234 Elm St', 'Istanbul', '555-1234', '34000', 'Turkey');
 
--- The Following data insertions are commented out to avoid conflicts since they are dynamicly generated in the application.
--- INSERT INTO Payments (payment_id, order_id, user_id, payment_date, amount, card_holder_name, card_number, card_expiration, cvv)
--- VALUES
--- (1, 1, 1, "2024-11-01 10:05:00", 1500.00, "Arya Hassibi", AES_ENCRYPT("4111111111111111", "encryption_key"), "2026-05-01", AES_ENCRYPT("123", "encryption_key")),
--- (2, 2, 1, "2024-11-15 12:35:00", 800.00, "Arya Hassibi", AES_ENCRYPT("4111111111111111", "encryption_key"), "2026-05-01", AES_ENCRYPT("123", "encryption_key")),
--- (3, 3, 1, "2024-12-01 09:50:00", 300.00, "Arya Hassibi", AES_ENCRYPT("4111111111111111", "encryption_key"), "2026-05-01", AES_ENCRYPT("123", "encryption_key")),
--- (4, 4, 2, "2024-12-05 11:25:00", 500.00, "Beste Bayhan", AES_ENCRYPT("4222222222222222", "encryption_key"), "2025-06-01", AES_ENCRYPT("456", "encryption_key")),
--- (5, 5, 3, "2024-12-07 08:20:00", 2500.00, "Mustafa Topcu", AES_ENCRYPT("4333333333333333", "encryption_key"), "2027-07-01", AES_ENCRYPT("789", "encryption_key")),
--- (6, 6, 5, "2024-11-20 14:55:00", 750.00, "Eid Alhamali", AES_ENCRYPT("4444444444444444", "encryption_key"), "2025-08-01", AES_ENCRYPT("012", "encryption_key")),
--- (7, 7, 6, "2024-10-25 16:35:00", 1200.00, "Ecem Akın", AES_ENCRYPT("4555555555555555", "encryption_key"), "2024-09-01", AES_ENCRYPT("345", "encryption_key")),
--- (8, 8, 6, "2024-12-02 13:45:00", 600.00, "Ecem Akın", AES_ENCRYPT("4555555555555555", "encryption_key"), "2024-09-01", AES_ENCRYPT("345", "encryption_key")),
--- (9, 9, 8, "2024-12-06 17:30:00", 900.00, "Cemal Yılmaz", AES_ENCRYPT("4666666666666666", "encryption_key"), "2026-10-01", AES_ENCRYPT("678", "encryption_key"));
-
--- INSERT INTO RefundRequests (refund_request_id, order_id, user_id, request_date, status, notes)
--- VALUES
--- (1, 2, 1, "2024-11-20 10:00:00", "approved", "Product arrived damaged."),
--- (2, 4, 2, "2024-12-10 12:00:00", "pending", "Wrong product delivered."),
--- (3, 7, 6, "2024-10-30 09:30:00", "rejected", "No reason provided.");
-
--- INSERT INTO ReturnItems (return_item_id, refund_request_id, product_id, quantity, price_at_purchase, reason)
--- VALUES
--- (1, 1, 3, 1, 600.00, "Damaged packaging."),
--- (2, 2, 6, 2, 520.00, "Incorrect variant received."),
--- (3, 3, 12, 1, 575.00, "Did not like the taste.");
-
--- INSERT INTO Invoices (invoice_id, order_id, user_id, invoice_pdf, created_at)
--- VALUES
--- (1, 1, 1, NULL, "2024-11-05 15:05:00"),
--- (2, 2, 1, NULL, "2024-11-17 18:05:00"),
--- (3, 3, 1, NULL, "2024-12-06 14:35:00"),
--- (4, 4, 2, NULL, "2024-12-05 11:25:00"),
--- (5, 5, 3, NULL, "2024-12-07 08:25:00"),
--- (6, 6, 5, NULL, "2024-11-23 16:05:00"),
--- (7, 7, 6, NULL, "2024-10-30 10:05:00"),
--- (8, 8, 6, NULL, "2024-12-02 13:45:00"),
--- (9, 9, 8, NULL, "2024-12-06 17:30:00");
 
 INSERT INTO Discounts (discount_id, discount_type, value, start_date, end_date, variant_id, active)
 VALUES
@@ -417,7 +334,7 @@ VALUES
 (3, 4, "2024-12-05 15:45:00"),
 (4, 5, "2024-12-02 18:20:00"),
 (5, 6, "2024-12-07 11:10:00"),
-(6, 8, "2024-12-04 13:50:00");
+(6, 7, "2024-12-04 13:50:00");
 
 INSERT INTO WishlistItems (wishlist_item_id, wishlist_id, variant_id, added_at)
 VALUES
@@ -441,7 +358,7 @@ VALUES
 (9, 5, 11, "2024-12-07 11:15:00"),
 (10, 5, 13, "2024-12-07 11:25:00"),
 
--- User 8"s Wishlist
+-- User 7"s Wishlist
 (11, 6, 18, "2024-12-04 13:55:00"),
 (12, 6, 28, "2024-12-04 14:05:00"),
 (13, 6, 30, "2024-12-04 14:20:00");
