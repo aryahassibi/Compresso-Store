@@ -1,7 +1,7 @@
 // src/App.js
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import MainPage from './components/MainPage';
+import MainPage from './components/MainPage/MainPage';
 import Cart from './components/Cart';
 import ProductsPage from './components/ProductsPage/ProductsPage';
 import ProductDetail from './components/ProductDetail/ProductDetail'; // Import ProductDetail
