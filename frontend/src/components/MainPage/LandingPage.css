@@ -3,7 +3,7 @@
 .lp-video-container {
     position: relative;
     width: 100%;
-    height: calc(100vh - 79px); 
+    height: calc(100vh - 72px); 
     overflow: hidden;
     top: 0;
     display: flex; 

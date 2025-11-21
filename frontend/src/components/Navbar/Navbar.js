@@ -89,7 +89,9 @@ const Navbar = () => {
   return (
     <div className="navbar-container">
       <nav className="navbar" onMouseDown={() => setIsProductsOpen(false)}>
-        <img src={compressoLogoDark} alt="Compresso Logo" className="navbar-logo" />
+        <Link to="/">
+          <img src={compressoLogoDark} alt="Compresso Logo" className="navbar-logo" />
+        </Link>
 
         <div className="navbar-center">
           <ul className="navbar-links">
@@ -150,10 +152,11 @@ const Navbar = () => {
               )}
             </div>
           </div>
-
-          <Link to="/cart">
-            <img src={shopIcon} alt="Shop Icon" className="shop-icon" />
-          </Link>
+          <div className="user-icon-container">
+            <Link to="/cart">
+              <img src={shopIcon} alt="Shop Icon" className="shop-icon" />
+            </Link>
+          </div>
         </div>
       </nav>
       <ProductsDropdownMenu open={isProductsOpen} setOpen={setIsProductsOpen}/>
