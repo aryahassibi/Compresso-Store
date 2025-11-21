@@ -8,7 +8,7 @@
     top: 0;
     display: flex; 
     justify-content: center; 
-    align-items: flex-start; 
+    align-items: flex-start;
 }
 
 .lp-video-background {
@@ -33,7 +33,7 @@
     align-items: flex-end;
     pointer-events: none; 
     z-index: 1; 
-    padding-bottom: 15%; 
+    padding-bottom: 5%; 
 }
 
 .lp-tagline {
@@ -67,13 +67,15 @@
     background: transparent; 
     border: 2px solid rgba(255, 255, 255, 0.8); 
     color: #ffffff; 
-    padding: 15px 30px;
+    padding: 15px 50px;
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
     border-radius: 0; 
     cursor: pointer;
     transition: all 0.3s ease; 
+    border-radius: 4px;
+    letter-spacing: 2px;
 }
 
 /* Hover Effect */
