@@ -41,8 +41,10 @@
 
 /* Centered Links */
 .navbar-container .navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  flex: 1;
   justify-content: center;
   align-items: center;
 }
