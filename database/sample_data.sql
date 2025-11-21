@@ -67,47 +67,6 @@ VALUES
     "An ethereal experience. Jasmine notes entwined with tropical fruit sweetness make this a coffee to savor slowly, like a daydream slipping into reality.", 
     TRUE, "Panama Coffee Treasures");
 
--- (11, "Mexican Firewood", "Mexico", "French", "Blend", "Ground", "Smoke and spiced chocolate", "Other", "Half-Caf", 1, 
---     "A robust brew that feels like sitting by a crackling fire in the Mexican highlands. Smoke and spiced chocolate warmth make this a grounding companion.", 
---     FALSE, "Mexican Coffee Collective"),
-
--- (12, "Peruvian Secret Garden", "Peru", "Medium", "Arabica", "Whole Bean", "Floral and honey", "Washed", "Decaf", 2, 
---     "Soft as the petals of an unseen bloom, this coffee whispers of a hidden garden. Its floral and honey notes unfold gently, like secrets in the air.", 
---     TRUE, "Peruvian Heritage Beans"),
-
--- (13, "Yemen Desert Mirage", "Yemen", "Dark", "Blend", "Whole Bean", "Chocolate and fig", "Natural", "High", 5, 
---     "Like a rare vision in the shifting sands, this coffee is a treasure of chocolate richness and fig sweetness. A mirage worth chasing.", 
---     FALSE, "Yemeni Coffee Routes"),
-
--- (14, "Vietnamese Bold Horizon", "Vietnam", "French", "Robusta", "Ground", "Bold with caramel undertones", "Washed", "High", 1, 
---     "A daring blend that pushes boundaries. Its boldness and caramel undertones embody the resilience and spirit of Vietnam.", 
---     FALSE, "Vietnam Coffee Collective"),
-
--- (15, "Kenyan Red Sunset", "Kenya", "Dark", "Arabica", "Ground", "Berry and wine", "Natural", "High", 5, 
---     "Rich as a Kenyan sunset fading to red, this coffee's berry and wine notes evoke a boldness that commands attention.", 
---     FALSE, "Kenyan Bean Collective"),
-
--- (16, "Honduran Stargazer", "Honduras", "Medium", "Arabica", "Whole Bean", 
---     "Sweet and herbal", "Washed", "Decaf", 4, 
---     "A coffee for quiet nights under infinite skies. Sweetness and herbal notes blend in harmony, like constellations above.", 
---     TRUE, "Honduran Coffee Routes"),
-
--- (17, "Laos Whispering Rain", "Laos", "Medium", "Blend", "Whole Bean", "Nutty with soft spice", "Natural", "Half-Caf", 4, 
---     "Gentle as rain on lush green fields, this coffee offers nutty warmth with a touch of spice. It feels like a quiet conversation with nature.", 
---     TRUE, "Laos Coffee Collective"),
-
--- (18, "Turkish Caravan Tale", "Turkey", "French", "Blend", "Ground", "Cardamom and dark chocolate", "Other", "High", 2, 
---     "Rich, spiced, and complex as the tales of caravans crossing ancient lands. Cardamom and dark chocolate transport you to a world of wonder.", 
---     FALSE, "Turkish Coffee Routes"),
-
--- (19, "Colombian Daybreak", "Colombia", "Light", "Arabica", "Ground", "Bright and citrusy", "Washed", "High", 2, 
---     "Fresh as dawn breaking over Colombian hills, this coffee's brightness awakens the senses and inspires hope for the day ahead.", 
---     TRUE, "Colombian Coffee Legends"),
-
--- (20, "Ecuadorian High Spirits", "Ecuador", "Medium", "Blend", "Whole Bean", "Cocoa and citrus", "Natural", "High", 4, 
---     "Uplifting and bright, this coffee's cocoa depth and citrus zing feel like a celebration in a cup. A tribute to life's vibrant highs.", 
---     TRUE, "Ecuadorian Coffee Routes");
-
 INSERT INTO Product_Variant (variant_id, product_id, weight_grams, price, stock, sku)
 VALUES
 -- Product 1 Variants
@@ -149,42 +108,6 @@ VALUES
 (18, 10, 250, 510.00, 0, "HON-MAR-250"),        -- Out of stock
 (19, 10, 500, 1000.00, 1, "HON-MAR-500");       -- Only 1 left in stock
 
--- Product 11 Variants
--- (20, 11, 250, 495.00, 130, "PER-SIG-250"),
-
--- -- Product 12 Variants
--- (21, 12, 250, 575.00, 90, "TAN-PEA-250"),
--- (22, 12, 500, 1150.00, 1, "TAN-PEA-500"),       -- Only 1 left in stock
--- (23, 12, 1000, 2200.00, 20, "TAN-PEA-1000"),
-
--- -- Product 13 Variants
--- (24, 13, 250, 610.00, 80, "PNG-SIG-250"),
-
--- -- Product 14 Variants
--- (25, 14, 250, 540.00, 100, "RWA-BUR-250"),
--- (26, 14, 500, 1080.00, 50, "RWA-BUR-500"),
-
--- -- Product 15 Variants
--- (27, 15, 250, 505.00, 120, "ELS-PAC-250"),
-
--- -- Product 16 Variants
--- (28, 16, 250, 700.00, 60, "PAN-GEI-250"),
--- (29, 16, 500, 1350.00, 0, "PAN-GEI-500"),       -- Out of stock
--- (30, 16, 1000, 2600.00, 15, "PAN-GEI-1000"),
-
--- -- Product 17 Variants
--- (31, 17, 250, 380.00, 200, "VIE-ROB-250"),
-
--- -- Product 18 Variants
--- (32, 18, 250, 550.00, 100, "IND-MON-250"),
-
--- -- Product 19 Variants
--- (33, 19, 250, 620.00, 70, "YEM-MOH-250"),
--- (34, 19, 500, 1200.00, 1, "YEM-MOH-500"),       -- Only 1 left in stock
-
--- -- Product 20 Variants
--- (35, 20, 250, 500.00, 0, "LAO-BOL-250"),
--- (36, 20, 500, 980.00, 40, "LAO-BOL-500");       -- Out of stock
 
 INSERT INTO Product_Images (image_id, variant_id, image_url, alt_text)
 VALUES
@@ -217,33 +140,6 @@ VALUES
 
 (18, 18, "/assets/images/products/product10.png", "Panama Geisha Dream 250g"),
 (19, 19, "/assets/images/products/product10.png", "Panama Geisha Dream 500g");
-
--- (20, 20, "/assets/images/products/product11.png", "Mexican Firewood 250g"),
-
--- (21, 21, "/assets/images/products/product12.png", "Peruvian Secret Garden 250g"),
--- (22, 22, "/assets/images/products/product12.png", "Peruvian Secret Garden 500g"),
--- (23, 23, "/assets/images/products/product12.png", "Peruvian Secret Garden 1000g"),
-
--- (24, 24, "/assets/images/products/product13.png", "Yemen Desert Mirage 250g"),
-
--- (25, 25, "/assets/images/products/product14.png", "Vietnamese Bold Horizon 250g"),
--- (26, 26, "/assets/images/products/product14.png", "Vietnamese Bold Horizon 500g"),
-
--- (27, 27, "/assets/images/products/product15.png", "Kenyan Red Sunset 250g"),
-
--- (28, 28, "/assets/images/products/product16.png", "Honduran Stargazer 250g"),
--- (29, 29, "/assets/images/products/product16.png", "Honduran Stargazer 500g"),
--- (30, 30, "/assets/images/products/product16.png", "Honduran Stargazer 1000g"),
-
--- (31, 31, "/assets/images/products/product17.png", "Laos Whispering Rain 250g"),
-
--- (32, 32, "/assets/images/products/product18.png", "Turkish Caravan Tale 250g"),
-
--- (33, 33, "/assets/images/products/product19.png", "Colombian Daybreak 250g"),
--- (34, 34, "/assets/images/products/product19.png", "Colombian Daybreak 500g"),
-
--- (35, 35, "/assets/images/products/product20.png", "Ecuadorian High Spirits 250g"),
--- (36, 36, "/assets/images/products/product20.png", "Ecuadorian High Spirits 500g");
 
 -- Insert into ShoppingCart for Registered Users
 INSERT INTO ShoppingCart (cart_id, user_id, session_id, created_at, updated_at)
@@ -283,12 +179,21 @@ SET p.average_rating = COALESCE(ratings.avg_rating, 0);
 
 INSERT INTO Orders (order_id, user_id, total_price, status, delivery_option_id, created_at, updated_at)
 VALUES
--- Order 1 by Arya Hassibi
+-- Orders by user 1
 (1, 1, 1350.00, 'processing', 1, '2025-01-10 10:15:00', '2025-01-10 10:15:00'),
 (2, 1, 2250.00, 'in-transit', 2, '2025-01-11 14:30:00', '2025-01-12 09:45:00'),
 (3, 1, 1200.00, 'delivered', 3, '2024-11-09 08:20:00', '2025-01-11 16:50:00'),
 (4, 1, 950.00, 'canceled', 1, '2025-01-12 11:00:00', '2025-01-12 12:00:00'),
-(5, 1, 1275.00, 'delivered', 2, '2025-01-13 09:10:00', '2025-01-13 09:10:00');
+(5, 1, 1275.00, 'delivered', 2, '2025-01-13 09:10:00', '2025-01-13 09:10:00'),
+
+-- Orders by user 2
+(6, 2, 1450.00, 'processing', 1, '2025-01-15 11:00:00', '2025-01-15 11:00:00'), 
+(7, 2, 2750.00, 'in-transit', 2, '2025-01-16 15:30:00', '2025-01-17 10:00:00'),
+
+-- Orders by user 3
+(8, 3, 1600.00, 'delivered', 3, '2024-11-12 09:00:00', '2025-01-17 12:30:00'), 
+(9, 3, 850.00, 'canceled', 1, '2025-01-18 14:00:00', '2025-01-18 15:00:00'), 
+(10, 3, 1350.00, 'delivered', 2, '2025-01-19 08:45:00', '2025-01-19 08:45:00');
 
 INSERT INTO OrderItems (order_id, variant_id, quantity, price_at_purchase)
 VALUES
@@ -327,6 +232,29 @@ VALUES
 ('Home Address 1', 1, 3, '1234 Elm St', 'Istanbul', '555-1234', '34000', 'Turkey'),
 ('Home Address 1', 1, 1, '1234 Elm St', 'Istanbul', '555-1234', '34000', 'Turkey'),
 ('Home Address 1', 1, 2, '1234 Elm St', 'Istanbul', '555-1234', '34000', 'Turkey');
+
+INSERT INTO Payments (payment_id, order_id, user_id, payment_date, amount, card_holder_name, card_number, card_expiration, cvv)
+VALUES
+(1, 1, 1, "2024-11-01 10:05:00", 1500.00, "Arya Hassibi", AES_ENCRYPT("4111111111111111", "encryption_key"), "2026-05-01", AES_ENCRYPT("123", "encryption_key")),
+(2, 2, 1, "2024-11-15 12:35:00", 800.00, "Arya Hassibi", AES_ENCRYPT("4111111111111111", "encryption_key"), "2026-05-01", AES_ENCRYPT("123", "encryption_key")),
+(3, 3, 1, "2024-12-01 09:50:00", 300.00, "Arya Hassibi", AES_ENCRYPT("4111111111111111", "encryption_key"), "2026-05-01", AES_ENCRYPT("123", "encryption_key")),
+(4, 4, 2, "2024-12-05 11:25:00", 500.00, "Beste Bayhan", AES_ENCRYPT("4222222222222222", "encryption_key"), "2025-06-01", AES_ENCRYPT("456", "encryption_key")),
+(5, 5, 3, "2024-12-07 08:20:00", 2500.00, "Mustafa Topcu", AES_ENCRYPT("4333333333333333", "encryption_key"), "2027-07-01", AES_ENCRYPT("789", "encryption_key")),
+(6, 6, 5, "2024-11-20 14:55:00", 750.00, "Eid Alhamali", AES_ENCRYPT("4444444444444444", "encryption_key"), "2025-08-01", AES_ENCRYPT("012", "encryption_key")),
+(7, 7, 6, "2024-10-25 16:35:00", 1200.00, "Ecem Akın", AES_ENCRYPT("4555555555555555", "encryption_key"), "2024-09-01", AES_ENCRYPT("345", "encryption_key")),
+(8, 8, 6, "2024-12-02 13:45:00", 600.00, "Ecem Akın", AES_ENCRYPT("4555555555555555", "encryption_key"), "2024-09-01", AES_ENCRYPT("345", "encryption_key"));
+
+
+INSERT INTO RefundRequests 
+(refund_request_id, order_id, user_id, variant_id, quantity, price_at_purchase, 
+ request_date, status, reason, reject_reason)
+VALUES
+(1, 2, 1, 3, 1, 600.00, "2024-11-20 10:00:00", "approved", "Product arrived damaged.", NULL),
+(2, 4, 2, 6, 2, 520.00, "2024-12-10 12:00:00", "pending", "Wrong product delivered.", NULL),
+(3, 7, 6, 12, 1, 575.00, "2024-10-30 09:30:00", "rejected", "No reason provided.", NULL),
+(4, 5, 3, 5, 1, 450.00, "2024-11-15 14:00:00", "approved", "Received a defective item.", NULL),
+(5, 3, 4, 8, 1, 300.00, "2024-11-18 11:45:00", "pending", "Item not as described.", NULL),
+(6, 1, 5, 10, 1, 700.00, "2024-11-20 16:20:00", "rejected", "Request submitted after return period.", NULL);
 
 
 INSERT INTO Discounts (discount_id, discount_type, value, start_date, end_date, variant_id, active)

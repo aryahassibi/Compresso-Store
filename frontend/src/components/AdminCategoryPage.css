@@ -1,93 +1,122 @@
 
-.admin-category-container{
-    max-width: 800px;
+.admin-category-container {
+    max-width: 960px;
     margin: 0 auto;
-    padding: 20px;
-    text-align: center;
+    padding: 3rem 1.5rem;
+    text-align: left;
+    background: var(--background);
+    min-height: calc(100vh - 72px);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-.admin-category-container .admin-category-container h1,
-.admin-category-container .admin-category-container h2 {
-    color: #4CAF50;
-    margin-bottom: 15px;
+.admin-category-container h1,
+.admin-category-container h2 {
+    color: var(--neutral-black);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+}
+
+.admin-category-container h1 {
+    font-size: 2.25rem;
+    text-transform: uppercase;
+}
+
+.admin-category-container h2 {
+    font-size: 1.25rem;
+    color: var(--neutral-dark-gray);
+}
+
+.admin-category-container .go-back-button-category {
+    align-self: flex-start;
+    background-color: var(--neutral-black);
+    color: var(--neutral-white);
+    border: none;
+    padding: 0.85rem 1.4rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 10px 24px rgba(17, 23, 71, 0.2);
+}
+
+.admin-category-container .go-back-button-category:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(17, 23, 71, 0.25);
 }
 
 .admin-category-container .add-category-form {
     display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+    background: var(--neutral-white);
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
 }
 
 .admin-category-container .add-category-form input {
-    padding: 8px;
-    border: 1px solid #ddd;
+    padding: 0.75rem;
+    border: 1px solid var(--neutral-light-gray);
     border-radius: 5px;
-    width: 200px;
+    flex: 1;
+    min-width: 200px;
 }
 
 .admin-category-container .add-category-form button {
-    background-color: #4CAF50;
-    color: white;
+    background-color: var(--secondary-dark);
+    color: var(--neutral-white);
     border: none;
-    padding: 8px 12px;
+    padding: 0.85rem 1.4rem;
     cursor: pointer;
     border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    transition: opacity 0.2s ease;
+}
+
+.admin-category-container .add-category-form button:hover {
+    opacity: 0.9;
 }
 
 .admin-category-container .category-list {
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
 }
 
 .admin-category-container .category-list li {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 10px 0;
-    padding: 10px;
+    background-color: var(--neutral-white);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+    padding: 1.25rem 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
 }
 
 .admin-category-container .category-list button {
-    background-color: #e74c3c;
-    color: white;
+    background-color: var(--error-color);
+    color: var(--neutral-white);
     border: none;
-    padding: 5px 10px;
+    padding: 0.75rem 1.1rem;
     border-radius: 5px;
     cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    transition: opacity 0.2s ease;
 }
 
 .admin-category-container .category-list button:hover {
-    background-color: #ad372a;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-
-.admin-category-container .go-back-button-category {
-    background-color: #e36c16;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transitions */
-}
-
-.admin-category-container .go-back-button-category:hover {
-    background-color: #7b5a3e;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add a shadow for a deeper look */
-}
-
-.admin-category-container .go-back-button-category:active {
-    transform: scale(0.95); /* Add a press-down effect */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Reduce the shadow */
+    opacity: 0.9;
 }

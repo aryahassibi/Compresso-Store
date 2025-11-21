@@ -7,7 +7,6 @@ import { useNavigate } from 'react-router-dom';
 import RefundChart from './RefundChart';
 import RefundReject from './RefundReject';
 import Toast from './Toast';
-import backIcon from '../assets/images/icons/back.png'; 
 
 const RefundList = () => {
   const [refunds, setRefunds] = useState([]);
@@ -154,18 +153,13 @@ const RefundList = () => {
   }
 
   return (
-    <div>
+    <div className='refund-orders-page__container'>
 
       <div
         className="orders-page__back-btn"
         onClick={() => navigate("/admin/sales_management")}
       >
-        <img
-          src={backIcon}
-          alt="Back"
-          className="orders-page__back-icon"
-        />
-        <span>Go Back</span>
+        <span>◀︎ Go Back</span>
       </div>
       <RefundChart/>
       

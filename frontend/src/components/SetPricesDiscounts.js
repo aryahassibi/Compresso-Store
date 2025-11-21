@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./SetPricesDiscounts.css"; // Ensure this CSS file exists for styling
-import backIcon from '../assets/images/icons/back.png'; 
 
 const SetPricesDiscounts = () => {
   const [variants, setVariants] = useState([]);
@@ -145,12 +144,7 @@ const SetPricesDiscounts = () => {
         className="orders-page__back-btn"
         onClick={() => navigate("/admin/sales_management")}
       >
-        <img
-          src={backIcon}
-          alt="Back"
-          className="orders-page__back-icon"
-        />
-        <span>Go Back</span>
+        <span>◀︎ Go Back</span>
       </div>
 
       <div className="set-prices-title-container">

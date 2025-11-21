@@ -43,7 +43,7 @@ const AdminCategoryPage = () => {
     return (
         <div className="admin-category-container">
             <button className="go-back-button-category" onClick={() => navigate("/admin/product_management")}>
-                Go Back
+                ◀︎ Go Back
             </button>
             <h1>Category Management</h1>
 

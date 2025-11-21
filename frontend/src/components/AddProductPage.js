@@ -113,7 +113,7 @@ const AddProductPage = () => {
                 className="go-back-button"
                 onClick={() => navigate("/admin/view_products")}
             >
-                Go Back
+                ◀︎ Go Back
             </button>
 
             <h1>Add New Product</h1>

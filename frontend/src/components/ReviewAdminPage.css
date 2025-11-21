@@ -1,10 +1,14 @@
 /* Container Styles */
 .review-admin-container {
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 800px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    max-width: 960px;
+    background: var(--background);
+    min-height: calc(100vh - 72px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
 }
 
 /* Title and Description */
@@ -25,43 +29,47 @@
 
 /* Go Back Button */
 .go-back-button-review {
-    margin-bottom: 20px;
-    padding: 10px 15px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #e36c16;
+    align-self: flex-start;
+    padding: 0.85rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--neutral-white);
+    background-color: var(--neutral-black);
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 12px 24px rgba(17, 23, 71, 0.18);
 }
 
 .go-back-button-review:hover {
-    background-color: #7b5a3e;
-    transform: scale(1.05);
+    transform: translateY(-2px);
+    box-shadow: 0 16px 30px rgba(17, 23, 71, 0.25);
 }
 
 /* Review List */
 .review-list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.5rem;
+    width: 100%;
 }
 
 /* Review Card */
 .review-item {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
+    background-color: var(--neutral-white);
+    border-radius: 24px;
+    padding: 1.5rem;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .review-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.1);
 }
 
 /* Review Details */
@@ -87,35 +95,29 @@
 
 /* Buttons */
 .elegant-button {
-    padding: 8px 12px;
-    font-size: 14px;
-    color: #fff;
+    padding: 0.8rem 1.15rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--neutral-white);
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 }
 
 .elegant-button:hover {
-    transform: scale(1.05);
+    transform: translateY(-2px);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.16);
 }
 
-/* Accept Button */
 .accept-button {
-    background-color: #4caf50; /* More elegant green */
-    margin-right: 10px; /* Add spacing between buttons */
+    background-color: var(--success-color);
+    margin-right: 0.75rem;
 }
 
-.accept-button:hover {
-    background-color: #45a045;
-}
-
-/* Reject Button */
 .reject-button {
-    background-color: #f44336; /* More elegant red */
+    background-color: var(--error-color);
 }
-
-.reject-button:hover {
-    background-color: #e53935;
-}
-
