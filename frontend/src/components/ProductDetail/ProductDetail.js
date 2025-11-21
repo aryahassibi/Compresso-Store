@@ -164,7 +164,7 @@ const ProductDetail = () => {
     
     // Wishlist Button Handler
     const handleWishlistClick = () => {
-        toggleWishlist(variant_id, wishlistFilled, setWishlistFilled); 
+        toggleWishlist(variant_id, wishlistFilled, setWishlistFilled, showToast); 
     };
 
     // Write Review Navigation
