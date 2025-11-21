@@ -7,7 +7,6 @@ import successIcon from "../assets/images/icons/refundSuccess.png";
 import refundRejected from "../assets/images/icons/refundRejected.png"; 
 import pendingIcon from '../assets/images/icons/pending.png';
 import LineChart from "./LineChart";
-import backIcon from '../assets/images/icons/back.png'; 
 
 const InvoiceOrders = () => {
   const [orders, setOrders] = useState([]);
@@ -136,12 +135,7 @@ const InvoiceOrders = () => {
         className="orders-page__back-btn"
         onClick={() => navigate("/admin/sales_management")}
       >
-        <img
-          src={backIcon}
-          alt="Back"
-          className="orders-page__back-icon"
-        />
-        <span>Go Back</span>
+        <span>◀︎ Go Back</span>
       </div>
 
       <LineChart/>

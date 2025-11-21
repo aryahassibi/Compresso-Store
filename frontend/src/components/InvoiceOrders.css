@@ -1,12 +1,11 @@
 .invoice-orders-page__container {
-    max-width: 800px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
-    padding-top: var(--spacing-sm);
-    background-color: #f5f3f0;
-    top: 0;
+    padding: 4rem 1.5rem;
+    font-family: "Figtree", sans-serif;
+    color: var(--neutral-black);
+    background-color: var(--background);
+    min-height: calc(100vh - 72px);
   }
   
   .orders-page__title {
@@ -38,7 +37,7 @@
   }
   
   .orders-page__order {
-    border: 1px solid #7dc4ff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 20px;
     overflow: hidden;
     background: #fff;
@@ -467,44 +466,36 @@
   }
 
   .orders-page__back-btn {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     position: absolute;
     margin-top: 110px;
+      padding: 0.75rem 1.25rem;
     top: 20px; /* Adjusted top position for better alignment */
     left: 20px; /* Adjusted left position for consistency */
-    padding: 10px 20px; /* Added padding for better spacing */
-    border-radius: 25px; /* Rounded corners for a button-like appearance */
-    background-color: #f0f0f0; /* Light gray background for elegance */
-    color: #333; /* Darker text color for contrast */
+    border-radius: 5px; /* Rounded corners for a button-like appearance */
+    background-color: var(--neutral-black); /* Light gray background for elegance */
+    color: var(--neutral-white); /* Darker text color for contrast */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     cursor: pointer;
-    transition: all 0.3s ease; /* Smooth transitions for hover effects */
-    z-index: 10;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
   
   .orders-page__back-icon {
-    width: 20px; /* Adjusted size for a balanced look */
-    height: 20px;
-    margin-right: 10px; /* Space between the icon and text */
+    width: 18px;
+    height: 18px;
+    margin-right: 0.2rem;
     object-fit: contain;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
   }
   
   .orders-page__back-btn:hover {
-    background-color: #e0e0e0; /* Slightly darker background on hover */
-    transform: translateY(-2px); /* Lift the button slightly on hover */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
-  }
-  
-  .orders-page__back-btn:hover .orders-page__back-icon {
-    transform: scale(1.2); /* Larger scaling for the icon on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 16px 30px rgba(17, 23, 71, 0.25);
   }
   
   .orders-page__back-btn span {
-    font-size: 14px; /* Small and clean font size */
-    font-weight: 500; /* Medium font weight for readability */
-    color: #555; /* Subtle text color */
+    color: var(--neutral-white);
   }
   
   
