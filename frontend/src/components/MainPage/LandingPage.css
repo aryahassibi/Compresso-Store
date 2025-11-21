@@ -36,6 +36,32 @@
     padding-bottom: 15%; 
 }
 
+.lp-tagline {
+    position: absolute;
+    top: 130px;
+    left: 100px;
+    color: white;
+    text-align: left;
+    /* text-shadow: 0 4px 12px rgba(0,0,0,0.45); */
+    text-transform: uppercase;
+}
+
+.lp-tagline-main {
+    font-size: 3rem;    
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.lp-tagline-sub {
+    padding-top: 50px;
+    font-size: 1.75rem;
+    margin-top: 12px;
+    font-weight: 400;
+    opacity: 0.9;
+    /* max-width: 40%; */
+}
+
+
 .lp-shop-now-btn {
     pointer-events: auto; 
     background: transparent; 
