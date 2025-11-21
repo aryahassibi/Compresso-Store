@@ -63,11 +63,11 @@
   color: var(--neutral-black);
   text-decoration: none;
   font-size: var(--font-size-base);
-  transition: color 0.5s ease;
+  transition: color 0.3s ease;
 }
 
 .navbar-container .navbar-links a:hover {
-  color: var(--primary-dark);
+  color: var(--neutral-light-gray);
 }
 
 /* Navbar Right */
