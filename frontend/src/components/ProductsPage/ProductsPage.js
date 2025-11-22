@@ -57,6 +57,13 @@ const ProductsPage = () => {
     fetchProducts();
   }, [location.search]);
 
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, [location.search]);
+
   // Handle sort option change
   const handleSortChange = (event) => {
     const [field, order] = event.target.value.split('|');

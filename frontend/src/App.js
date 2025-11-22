@@ -31,6 +31,7 @@ import RefundList from "./components/RefundList";
 import InvoiceOrders from './components/InvoiceOrders';
 import ProfilePage from './components/ProfilePage';
 import SetPricesDiscounts from "./components/SetPricesDiscounts";
+import ScrollToTop from './components/ScrollToTop';
 import './index.css'; 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
   return (
     <CartProvider> {/* Wrap the app with CartProvider */}
       <Router>
+        <ScrollToTop />
         <div className="main-content">
           <Navbar />
           <Routes>
