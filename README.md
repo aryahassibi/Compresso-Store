@@ -10,9 +10,24 @@
     <img src="https://img.shields.io/badge/stack-react%20%7C%20node.js%20%7C%20mysql-blue" alt="Stack"/>
 </p>
 
+
 # 
 **Compresso Coffee Store** is a **full-stack web application** that implements the core features of an online shop ( + auth, order tracking, reviews, admin dashboard) using **React**, **Node.js**, and **MySQL**.
 The goal is not to mimic a production marketplace but to provide a clear, complete, and maintainable example of how the pieces of an e-commerce system fit together, from user authentication to order tracking and admin operations.
+
+
+<div align="center">
+
+<a href="https://www.youtube.com/watch?v=jluDrkG1ZR8" target="_blank">
+    <img src="https://img.youtube.com/vi/jluDrkG1ZR8/maxresdefault.jpg" 
+         alt="Compresso Store Demo Video" 
+         style="border-radius: 10px;">
+</a>
+
+<br>
+<i>Click the image to watch the <b>demo video</b> on Youtube</i>
+</div>
+
 
 
 > [!NOTE]
